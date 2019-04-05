@@ -1,0 +1,1103 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<?application progid="SMath Studio Desktop" version="0.97.5154.6193"?>
+<regions>
+  <settings>
+    <identity>
+      <id>a1d9872c-b10d-4605-8bff-717741aad00c</id>
+      <revision>21</revision>
+    </identity>
+    <calculation>
+      <precision>4</precision>
+      <exponentialThreshold>5</exponentialThreshold>
+      <fractions>decimal</fractions>
+    </calculation>
+    <pageModel active="true" printAreas="true" simpleEqualsOnly="false" printBackgroundImages="true">
+      <paper id="1" orientation="Portrait" width="850" height="1100" />
+      <margins left="39" right="39" top="39" bottom="39" />
+      <header alignment="Center" color="#a9a9a9">&amp;[DATE] &amp;[TIME] - &amp;[FILENAME]</header>
+      <footer alignment="Center" color="#a9a9a9">&amp;[PAGENUM] / &amp;[COUNT]</footer>
+      <backgrounds />
+    </pageModel>
+    <dependences>
+      <assembly name="SMath Studio Desktop" version="0.97.5154.6193" guid="a37cba83-b69c-4c71-9992-55ff666763bd" />
+      <assembly name="Text Region" version="1.10.5154.6555" guid="485d28c5-349a-48b6-93be-12a35a1c1e39" />
+      <assembly name="Math Region" version="0.97.5154.6193" guid="02f1ab51-215b-466e-a74d-5d8b1cf85e8d" />
+      <assembly name="Special Functions" version="1.11.5154.6552" guid="2814e667-4e12-48b1-8d51-194e480eabc5" />
+    </dependences>
+  </settings>
+  <region id="0" left="18" top="27" width="707" height="28" border="true" color="#000000" bgColor="#ffff80" fontSize="12">
+    <text lang="fre">
+      <p>Localisation de défaut à partir des valeurs U et I aux deux extrémités</p>
+    </text>
+  </region>
+  <region id="1" left="18" top="81" width="618" height="24" border="true" color="#000000" bgColor="#80ffff" fontSize="10">
+    <text lang="fre">
+      <p>Entrée des données tensions et courants aux deux extrémités de la liaison:</p>
+    </text>
+  </region>
+  <region id="2" left="27" top="108" width="754" height="31" color="#ff0000" bgColor="#ffffff" fontSize="14">
+    <text lang="fre">
+      <p>ATTENTION AU SENS DU COURANT AUX 2 EXTREMITES: courants entrants</p>
+    </text>
+  </region>
+  <region id="3" left="54" top="144" width="230" height="123" color="#000000" bgColor="#ffffff" fontSize="10">
+    <math>
+      <input>
+        <e type="operand">U1</e>
+        <e type="operand">279.9</e>
+        <e type="operand">i</e>
+        <e type="operand">π</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">24.4</e>
+        <e type="operand">180</e>
+        <e type="operator" args="2">/</e>
+        <e type="operator" args="1">-</e>
+        <e type="bracket">(</e>
+        <e type="operator" args="2">*</e>
+        <e type="function" preserve="true" args="1">exp</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">372.1</e>
+        <e type="operand">i</e>
+        <e type="operand">π</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">113.9</e>
+        <e type="operand">180</e>
+        <e type="operator" args="2">/</e>
+        <e type="operator" args="1">-</e>
+        <e type="bracket">(</e>
+        <e type="operator" args="2">*</e>
+        <e type="function" preserve="true" args="1">exp</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">155.47</e>
+        <e type="operand">i</e>
+        <e type="operand">π</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">120.66</e>
+        <e type="operand">180</e>
+        <e type="operator" args="2">/</e>
+        <e type="operator" args="2">*</e>
+        <e type="function" preserve="true" args="1">exp</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">3</e>
+        <e type="operand">1</e>
+        <e type="function" preserve="true" args="5">mat</e>
+        <e type="operator" args="2">:</e>
+      </input>
+    </math>
+  </region>
+  <region id="4" left="342" top="144" width="238" height="123" color="#000000" bgColor="#ffffff" fontSize="10">
+    <math>
+      <input>
+        <e type="operand">U2</e>
+        <e type="operand">279.1</e>
+        <e type="operand">i</e>
+        <e type="operand">π</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">27.66</e>
+        <e type="operand">180</e>
+        <e type="operator" args="2">/</e>
+        <e type="operator" args="1">-</e>
+        <e type="bracket">(</e>
+        <e type="operator" args="2">*</e>
+        <e type="function" preserve="true" args="1">exp</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">381.36</e>
+        <e type="operand">i</e>
+        <e type="operand">π</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">113.6</e>
+        <e type="operand">180</e>
+        <e type="operator" args="2">/</e>
+        <e type="operator" args="1">-</e>
+        <e type="bracket">(</e>
+        <e type="operator" args="2">*</e>
+        <e type="function" preserve="true" args="1">exp</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">139.9</e>
+        <e type="operand">i</e>
+        <e type="operand">π</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">121.95</e>
+        <e type="operand">180</e>
+        <e type="operator" args="2">/</e>
+        <e type="operator" args="2">*</e>
+        <e type="function" preserve="true" args="1">exp</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">3</e>
+        <e type="operand">1</e>
+        <e type="function" preserve="true" args="5">mat</e>
+        <e type="operator" args="2">:</e>
+      </input>
+    </math>
+  </region>
+  <region id="5" left="54" top="279" width="222" height="123" color="#000000" bgColor="#ffffff" fontSize="10">
+    <math>
+      <input>
+        <e type="operand">I1</e>
+        <e type="operand">24.84</e>
+        <e type="operand">i</e>
+        <e type="operand">π</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">48.2</e>
+        <e type="operand">180</e>
+        <e type="operator" args="2">/</e>
+        <e type="operator" args="1">-</e>
+        <e type="bracket">(</e>
+        <e type="operator" args="2">*</e>
+        <e type="function" preserve="true" args="1">exp</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">0.24</e>
+        <e type="operand">i</e>
+        <e type="operand">π</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">95</e>
+        <e type="operand">180</e>
+        <e type="operator" args="2">/</e>
+        <e type="operator" args="1">-</e>
+        <e type="bracket">(</e>
+        <e type="operator" args="2">*</e>
+        <e type="function" preserve="true" args="1">exp</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">31.47</e>
+        <e type="operand">i</e>
+        <e type="operand">π</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">54</e>
+        <e type="operand">180</e>
+        <e type="operator" args="2">/</e>
+        <e type="operator" args="2">*</e>
+        <e type="function" preserve="true" args="1">exp</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">3</e>
+        <e type="operand">1</e>
+        <e type="function" preserve="true" args="5">mat</e>
+        <e type="operator" args="2">:</e>
+      </input>
+    </math>
+  </region>
+  <region id="6" left="342" top="279" width="222" height="123" color="#000000" bgColor="#ffffff" fontSize="10">
+    <math>
+      <input>
+        <e type="operand">I2</e>
+        <e type="operand">40.49</e>
+        <e type="operand">i</e>
+        <e type="operand">π</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">47.3</e>
+        <e type="operator" args="1">-</e>
+        <e type="operand">180</e>
+        <e type="operator" args="2">/</e>
+        <e type="bracket">(</e>
+        <e type="operator" args="2">*</e>
+        <e type="function" preserve="true" args="1">exp</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">0.024</e>
+        <e type="operand">i</e>
+        <e type="operand">π</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">85</e>
+        <e type="operand">180</e>
+        <e type="operator" args="2">/</e>
+        <e type="bracket">(</e>
+        <e type="operator" args="2">*</e>
+        <e type="function" preserve="true" args="1">exp</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">52.36</e>
+        <e type="operand">i</e>
+        <e type="operand">π</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">54.5</e>
+        <e type="operand">180</e>
+        <e type="operator" args="2">/</e>
+        <e type="operator" args="2">*</e>
+        <e type="function" preserve="true" args="1">exp</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">3</e>
+        <e type="operand">1</e>
+        <e type="function" preserve="true" args="5">mat</e>
+        <e type="operator" args="2">:</e>
+      </input>
+    </math>
+  </region>
+  <region id="7" left="36" top="423" width="283" height="24" border="true" color="#000000" bgColor="#80ffff" fontSize="10">
+    <text lang="fre">
+      <p>Données d'impédance de la liaison</p>
+    </text>
+  </region>
+  <region id="8" left="18" top="459" width="113" height="24" color="#000000" bgColor="#ffffff" fontSize="10">
+    <math>
+      <input>
+        <e type="operand">Zld</e>
+        <e type="operand">0.1</e>
+        <e type="operand">i</e>
+        <e type="operand">4</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">+</e>
+        <e type="operator" args="2">:</e>
+      </input>
+    </math>
+  </region>
+  <region id="9" left="180" top="459" width="121" height="24" color="#000000" bgColor="#ffffff" fontSize="10">
+    <math>
+      <input>
+        <e type="operand">Zl0</e>
+        <e type="operand">0.3</e>
+        <e type="operand">i</e>
+        <e type="operand">15</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">+</e>
+        <e type="operator" args="2">:</e>
+      </input>
+    </math>
+  </region>
+  <region id="10" left="342" top="459" width="125" height="43" color="#000000" bgColor="#ffffff" fontSize="10">
+    <math>
+      <input>
+        <e type="operand">z</e>
+        <e type="operand">Zl0</e>
+        <e type="operand">2</e>
+        <e type="operand">Zld</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">+</e>
+        <e type="operand">3</e>
+        <e type="operator" args="2">/</e>
+        <e type="bracket">(</e>
+        <e type="operator" args="2">:</e>
+      </input>
+    </math>
+  </region>
+  <region id="11" left="495" top="459" width="110" height="43" color="#000000" bgColor="#ffffff" fontSize="10">
+    <math>
+      <input>
+        <e type="operand">m</e>
+        <e type="operand">Zl0</e>
+        <e type="operand">Zld</e>
+        <e type="operator" args="2">-</e>
+        <e type="bracket">(</e>
+        <e type="operand">3</e>
+        <e type="operator" args="2">/</e>
+        <e type="operator" args="2">:</e>
+      </input>
+    </math>
+  </region>
+  <region id="12" left="27" top="522" width="93" height="62" color="#000000" bgColor="#ffffff" fontSize="10">
+    <math>
+      <input>
+        <e type="operand">Zl</e>
+        <e type="operand">z</e>
+        <e type="operand">m</e>
+        <e type="operand">m</e>
+        <e type="operand">m</e>
+        <e type="operand">z</e>
+        <e type="operand">m</e>
+        <e type="operand">m</e>
+        <e type="operand">m</e>
+        <e type="operand">z</e>
+        <e type="operand">3</e>
+        <e type="operand">3</e>
+        <e type="function" preserve="true" args="11">mat</e>
+        <e type="operator" args="2">:</e>
+      </input>
+    </math>
+  </region>
+  <region id="13" left="189" top="549" width="457" height="62" color="#000000" bgColor="#ffffff" fontSize="10">
+    <math>
+      <input>
+        <e type="operand">Zl</e>
+      </input>
+      <result action="numeric">
+        <e type="operand">0.1667</e>
+        <e type="operand">7.6667</e>
+        <e type="operand">i</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">+</e>
+        <e type="operand">0.0667</e>
+        <e type="operand">3.6667</e>
+        <e type="operand">i</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">+</e>
+        <e type="operand">0.0667</e>
+        <e type="operand">3.6667</e>
+        <e type="operand">i</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">+</e>
+        <e type="operand">0.0667</e>
+        <e type="operand">3.6667</e>
+        <e type="operand">i</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">+</e>
+        <e type="operand">0.1667</e>
+        <e type="operand">7.6667</e>
+        <e type="operand">i</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">+</e>
+        <e type="operand">0.0667</e>
+        <e type="operand">3.6667</e>
+        <e type="operand">i</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">+</e>
+        <e type="operand">0.0667</e>
+        <e type="operand">3.6667</e>
+        <e type="operand">i</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">+</e>
+        <e type="operand">0.0667</e>
+        <e type="operand">3.6667</e>
+        <e type="operand">i</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">+</e>
+        <e type="operand">0.1667</e>
+        <e type="operand">7.6667</e>
+        <e type="operand">i</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">+</e>
+        <e type="operand">3</e>
+        <e type="operand">3</e>
+        <e type="function" preserve="true" args="11">mat</e>
+      </result>
+    </math>
+  </region>
+  <region id="14" left="27" top="648" width="541" height="24" border="true" color="#000000" bgColor="#80ffff" fontSize="10">
+    <text lang="fre">
+      <p>Distance au défaut en % de la longueur à partir de l'extrémité 1:</p>
+    </text>
+  </region>
+  <region id="15" left="45" top="702" width="140" height="24" color="#000000" bgColor="#ffffff" fontSize="10">
+    <math>
+      <input>
+        <e type="operand">M1</e>
+        <e type="operand">U1</e>
+        <e type="operand">U2</e>
+        <e type="operator" args="2">-</e>
+        <e type="operand">Zl</e>
+        <e type="operand">I2</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">+</e>
+        <e type="operator" args="2">:</e>
+      </input>
+    </math>
+  </region>
+  <region id="16" left="225" top="702" width="232" height="62" color="#000000" bgColor="#ffffff" fontSize="10">
+    <math>
+      <input>
+        <e type="operand">M1</e>
+      </input>
+      <result action="numeric">
+        <e type="operand">86.0478</e>
+        <e type="operand">333.8324</e>
+        <e type="operand">i</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">+</e>
+        <e type="operand">41.5929</e>
+        <e type="operator" args="1">-</e>
+        <e type="operand">222.3173</e>
+        <e type="operand">i</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">+</e>
+        <e type="operand">216.1378</e>
+        <e type="operator" args="1">-</e>
+        <e type="operand">353.9515</e>
+        <e type="operand">i</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">+</e>
+        <e type="operand">3</e>
+        <e type="operand">1</e>
+        <e type="function" preserve="true" args="5">mat</e>
+      </result>
+    </math>
+  </region>
+  <region id="17" left="45" top="801" width="119" height="26" color="#000000" bgColor="#ffffff" fontSize="10">
+    <math>
+      <input>
+        <e type="operand">M2</e>
+        <e type="operand">Zl</e>
+        <e type="operand">I1</e>
+        <e type="operand">I2</e>
+        <e type="operator" args="2">+</e>
+        <e type="bracket">(</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">:</e>
+      </input>
+    </math>
+  </region>
+  <region id="18" left="234" top="801" width="232" height="62" color="#000000" bgColor="#ffffff" fontSize="10">
+    <math>
+      <input>
+        <e type="operand">M2</e>
+      </input>
+      <result action="numeric">
+        <e type="operand">131.8351</e>
+        <e type="operand">513.1728</e>
+        <e type="operand">i</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">+</e>
+        <e type="operand">64.8048</e>
+        <e type="operator" args="1">-</e>
+        <e type="operand">341.842</e>
+        <e type="operand">i</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">+</e>
+        <e type="operand">333.1208</e>
+        <e type="operator" args="1">-</e>
+        <e type="operand">544.3604</e>
+        <e type="operand">i</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">+</e>
+        <e type="operand">3</e>
+        <e type="operand">1</e>
+        <e type="function" preserve="true" args="5">mat</e>
+      </result>
+    </math>
+  </region>
+  <region id="19" left="45" top="882" width="126" height="59" color="#000000" bgColor="#ff8080" fontSize="10">
+    <math>
+      <input>
+        <e type="operand">M1</e>
+        <e type="operand">1</e>
+        <e type="function" preserve="true" args="2">el</e>
+        <e type="operand">M2</e>
+        <e type="operand">1</e>
+        <e type="function" preserve="true" args="2">el</e>
+        <e type="operator" args="2">/</e>
+        <e type="function" preserve="true" args="1">abs</e>
+      </input>
+      <result action="numeric">
+        <e type="operand">0.6507</e>
+      </result>
+    </math>
+  </region>
+  <region id="20" left="216" top="882" width="126" height="59" color="#000000" bgColor="#ff8080" fontSize="10">
+    <math>
+      <input>
+        <e type="operand">M1</e>
+        <e type="operand">2</e>
+        <e type="function" preserve="true" args="2">el</e>
+        <e type="operand">M2</e>
+        <e type="operand">2</e>
+        <e type="function" preserve="true" args="2">el</e>
+        <e type="operator" args="2">/</e>
+        <e type="function" preserve="true" args="1">abs</e>
+      </input>
+      <result action="numeric">
+        <e type="operand">0.6501</e>
+      </result>
+    </math>
+  </region>
+  <region id="21" left="405" top="882" width="126" height="59" color="#000000" bgColor="#ff8080" fontSize="10">
+    <math>
+      <input>
+        <e type="operand">M1</e>
+        <e type="operand">3</e>
+        <e type="function" preserve="true" args="2">el</e>
+        <e type="operand">M2</e>
+        <e type="operand">3</e>
+        <e type="function" preserve="true" args="2">el</e>
+        <e type="operator" args="2">/</e>
+        <e type="function" preserve="true" args="1">abs</e>
+      </input>
+      <result action="numeric">
+        <e type="operand">0.6498</e>
+      </result>
+    </math>
+  </region>
+  <region id="22" left="603" top="936" width="158" height="24" color="#000000" bgColor="#ffffff" fontSize="10">
+    <text lang="fre">
+      <p>La norme parait le</p>
+    </text>
+  </region>
+  <region id="23" left="45" top="954" width="208" height="61" color="#000000" bgColor="#ffffff" fontSize="10">
+    <math>
+      <input>
+        <e type="operand">x</e>
+        <e type="operand">1</e>
+        <e type="operand">3</e>
+        <e type="operator" args="2">/</e>
+        <e type="operand">M1</e>
+        <e type="operand">1</e>
+        <e type="function" preserve="true" args="2">el</e>
+        <e type="operand">M2</e>
+        <e type="operand">1</e>
+        <e type="function" preserve="true" args="2">el</e>
+        <e type="operator" args="2">/</e>
+        <e type="function" preserve="true" args="1">abs</e>
+        <e type="operand">M1</e>
+        <e type="operand">2</e>
+        <e type="function" preserve="true" args="2">el</e>
+        <e type="operand">M2</e>
+        <e type="operand">2</e>
+        <e type="function" preserve="true" args="2">el</e>
+        <e type="operator" args="2">/</e>
+        <e type="function" preserve="true" args="1">abs</e>
+        <e type="operator" args="2">+</e>
+        <e type="operand">M1</e>
+        <e type="operand">3</e>
+        <e type="function" preserve="true" args="2">el</e>
+        <e type="operand">M2</e>
+        <e type="operand">3</e>
+        <e type="function" preserve="true" args="2">el</e>
+        <e type="operator" args="2">/</e>
+        <e type="function" preserve="true" args="1">abs</e>
+        <e type="operator" args="2">+</e>
+        <e type="bracket">(</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">:</e>
+      </input>
+    </math>
+  </region>
+  <region id="24" left="441" top="963" width="159" height="45" color="#000000" bgColor="#ff8080" fontSize="10">
+    <math>
+      <input>
+        <e type="operand">M1</e>
+        <e type="function" preserve="true" args="1">norme</e>
+        <e type="operand">M2</e>
+        <e type="function" preserve="true" args="1">norme</e>
+        <e type="operator" args="2">/</e>
+      </input>
+      <result action="numeric">
+        <e type="operand">0.6502</e>
+      </result>
+    </math>
+  </region>
+  <region id="25" left="585" top="963" width="184" height="24" color="#000000" bgColor="#ffffff" fontSize="10">
+    <text lang="fre">
+      <p>meilleur choix pour x</p>
+    </text>
+  </region>
+  <region id="26" left="306" top="981" width="94" height="24" border="true" color="#000000" bgColor="#ff8080" fontSize="10">
+    <math>
+      <input>
+        <e type="operand">x</e>
+      </input>
+      <result action="numeric">
+        <e type="operand">0.6502</e>
+      </result>
+    </math>
+  </region>
+  <region id="27" left="27" top="1044" width="478" height="24" border="true" color="#000000" bgColor="#80ffff" fontSize="10">
+    <text lang="fre">
+      <p>Calcul des courants et tensions à l'emplacement du défaut</p>
+    </text>
+  </region>
+  <region id="28" left="27" top="1107" width="151" height="24" color="#000000" bgColor="#ffffff" fontSize="10">
+    <text lang="fre">
+      <p>Courant de défaut</p>
+    </text>
+  </region>
+  <region id="29" left="63" top="1170" width="105" height="24" color="#000000" bgColor="#ffffff" fontSize="10">
+    <math>
+      <input>
+        <e type="operand">Idef</e>
+        <e type="operand">I1</e>
+        <e type="operand">I2</e>
+        <e type="operator" args="2">+</e>
+        <e type="operator" args="2">:</e>
+      </input>
+    </math>
+  </region>
+  <region id="30" left="216" top="1170" width="224" height="62" color="#000000" bgColor="#ffff80" fontSize="10">
+    <math>
+      <input>
+        <e type="operand">Idef</e>
+      </input>
+      <result action="numeric">
+        <e type="operand">44.0154</e>
+        <e type="operand">48.2743</e>
+        <e type="operand">i</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">-</e>
+        <e type="operand">0.0188</e>
+        <e type="operator" args="1">-</e>
+        <e type="operand">0.2152</e>
+        <e type="operand">i</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">-</e>
+        <e type="operand">48.9032</e>
+        <e type="operand">68.0869</e>
+        <e type="operand">i</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">+</e>
+        <e type="operand">3</e>
+        <e type="operand">1</e>
+        <e type="function" preserve="true" args="5">mat</e>
+      </result>
+    </math>
+  </region>
+  <region id="31" left="36" top="1260" width="683" height="24" color="#000000" bgColor="#ff8080" fontSize="10">
+    <text lang="fre">
+      <p>Valeur de x choisie au mieux fonction des calculs ci-dessus, la plus vraisemblable</p>
+    </text>
+  </region>
+  <region id="32" left="63" top="1305" width="68" height="24" color="#000000" bgColor="#ff8080" fontSize="10">
+    <math>
+      <input>
+        <e type="operand">x</e>
+        <e type="operand">0.65</e>
+        <e type="operator" args="2">:</e>
+      </input>
+    </math>
+  </region>
+  <region id="33" left="36" top="1377" width="151" height="24" color="#000000" bgColor="#ffffff" fontSize="10">
+    <math>
+      <input>
+        <e type="operand">Udef1</e>
+        <e type="operand">U1</e>
+        <e type="operand">x</e>
+        <e type="operand">Zl</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">I1</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">-</e>
+        <e type="operator" args="2">:</e>
+      </input>
+    </math>
+  </region>
+  <region id="34" left="225" top="1377" width="257" height="62" color="#000000" bgColor="#ffff80" fontSize="10">
+    <math>
+      <input>
+        <e type="operand">Udef1</e>
+      </input>
+      <result action="numeric">
+        <e type="operand">220.1359</e>
+        <e type="operand">241.2582</e>
+        <e type="operand">i</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">-</e>
+        <e type="operand">136.9159</e>
+        <e type="operator" args="1">-</e>
+        <e type="operand">423.9106</e>
+        <e type="operand">i</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">-</e>
+        <e type="operand">0.1698</e>
+        <e type="operand">0.2013</e>
+        <e type="operand">i</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">+</e>
+        <e type="operand">3</e>
+        <e type="operand">1</e>
+        <e type="function" preserve="true" args="5">mat</e>
+      </result>
+    </math>
+  </region>
+  <region id="35" left="36" top="1494" width="180" height="26" color="#000000" bgColor="#ffffff" fontSize="10">
+    <math>
+      <input>
+        <e type="operand">Udef2</e>
+        <e type="operand">U2</e>
+        <e type="operand">1</e>
+        <e type="operand">x</e>
+        <e type="operator" args="2">-</e>
+        <e type="bracket">(</e>
+        <e type="operand">Zl</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">I2</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">-</e>
+        <e type="operator" args="2">:</e>
+      </input>
+    </math>
+  </region>
+  <region id="36" left="225" top="1494" width="257" height="62" color="#000000" bgColor="#ffff80" fontSize="10">
+    <math>
+      <input>
+        <e type="operand">Udef2</e>
+      </input>
+      <result action="numeric">
+        <e type="operand">219.7809</e>
+        <e type="operand">241.5283</e>
+        <e type="operand">i</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">-</e>
+        <e type="operand">137.4462</e>
+        <e type="operator" args="1">-</e>
+        <e type="operand">424.0306</e>
+        <e type="operand">i</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">-</e>
+        <e type="operand">0.2209</e>
+        <e type="operator" args="1">-</e>
+        <e type="operand">0.0841</e>
+        <e type="operand">i</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">+</e>
+        <e type="operand">3</e>
+        <e type="operand">1</e>
+        <e type="function" preserve="true" args="5">mat</e>
+      </result>
+    </math>
+  </region>
+  <region id="37" left="36" top="1566" width="490" height="24" color="#000000" bgColor="#ffffff" fontSize="10">
+    <text lang="fre">
+      <p>Vérification de la concordance des Udef donc du choix de  x</p>
+    </text>
+  </region>
+  <region id="38" left="36" top="1593" width="238" height="45" color="#000000" bgColor="#ffff80" fontSize="10">
+    <math>
+      <input>
+        <e type="operand">Udef1</e>
+        <e type="operand">Udef2</e>
+        <e type="operator" args="2">-</e>
+        <e type="function" preserve="true" args="1">norme</e>
+        <e type="operand">U1</e>
+        <e type="function" preserve="true" args="1">norme</e>
+        <e type="operator" args="2">/</e>
+      </input>
+      <result action="numeric">
+        <e type="operand">0.0017</e>
+      </result>
+    </math>
+  </region>
+  <region id="39" left="45" top="1638" width="307" height="24" border="true" color="#000000" bgColor="#80ffff" fontSize="10">
+    <text lang="fre">
+      <p>Identification des phases impliquées</p>
+    </text>
+  </region>
+  <region id="40" left="63" top="1674" width="217" height="53" color="#000000" bgColor="#ffffff" fontSize="10">
+    <math>
+      <input>
+        <e type="operand">Idef</e>
+        <e type="operand">1</e>
+        <e type="function" preserve="true" args="2">el</e>
+        <e type="function" preserve="true" args="1">abs</e>
+        <e type="operand">Idef</e>
+        <e type="function" preserve="true" args="1">norme</e>
+        <e type="operator" args="2">/</e>
+        <e type="operand">100</e>
+        <e type="operator" args="2">*</e>
+      </input>
+      <result action="numeric">
+        <e type="operand">61.4687</e>
+      </result>
+    </math>
+  </region>
+  <region id="41" left="315" top="1674" width="208" height="53" color="#000000" bgColor="#ffffff" fontSize="10">
+    <math>
+      <input>
+        <e type="operand">Idef</e>
+        <e type="operand">2</e>
+        <e type="function" preserve="true" args="2">el</e>
+        <e type="function" preserve="true" args="1">abs</e>
+        <e type="operand">Idef</e>
+        <e type="function" preserve="true" args="1">norme</e>
+        <e type="operator" args="2">/</e>
+        <e type="operand">100</e>
+        <e type="operator" args="2">*</e>
+      </input>
+      <result action="numeric">
+        <e type="operand">0.2032</e>
+      </result>
+    </math>
+  </region>
+  <region id="42" left="540" top="1674" width="217" height="53" color="#000000" bgColor="#ffffff" fontSize="10">
+    <math>
+      <input>
+        <e type="operand">Idef</e>
+        <e type="operand">3</e>
+        <e type="function" preserve="true" args="2">el</e>
+        <e type="function" preserve="true" args="1">abs</e>
+        <e type="operand">Idef</e>
+        <e type="function" preserve="true" args="1">norme</e>
+        <e type="operator" args="2">/</e>
+        <e type="operand">100</e>
+        <e type="operator" args="2">*</e>
+      </input>
+      <result action="numeric">
+        <e type="operand">78.8769</e>
+      </result>
+    </math>
+  </region>
+  <region id="43" left="45" top="1764" width="196" height="53" color="#000000" bgColor="#ffffff" fontSize="10">
+    <math>
+      <input>
+        <e type="operand">xdef</e>
+        <e type="operand">1</e>
+        <e type="function" preserve="true" args="2">el</e>
+        <e type="operand">Idef</e>
+        <e type="operand">1</e>
+        <e type="function" preserve="true" args="2">el</e>
+        <e type="function" preserve="true" args="1">abs</e>
+        <e type="operand">Idef</e>
+        <e type="function" preserve="true" args="1">norme</e>
+        <e type="operator" args="2">/</e>
+        <e type="operand">100</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">:</e>
+      </input>
+    </math>
+  </region>
+  <region id="44" left="252" top="1764" width="196" height="53" color="#000000" bgColor="#ffffff" fontSize="10">
+    <math>
+      <input>
+        <e type="operand">xdef</e>
+        <e type="operand">2</e>
+        <e type="function" preserve="true" args="2">el</e>
+        <e type="operand">Idef</e>
+        <e type="operand">2</e>
+        <e type="function" preserve="true" args="2">el</e>
+        <e type="function" preserve="true" args="1">abs</e>
+        <e type="operand">Idef</e>
+        <e type="function" preserve="true" args="1">norme</e>
+        <e type="operator" args="2">/</e>
+        <e type="operand">100</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">:</e>
+      </input>
+    </math>
+  </region>
+  <region id="45" left="477" top="1764" width="196" height="53" color="#000000" bgColor="#ffffff" fontSize="10">
+    <math>
+      <input>
+        <e type="operand">xdef</e>
+        <e type="operand">3</e>
+        <e type="function" preserve="true" args="2">el</e>
+        <e type="operand">Idef</e>
+        <e type="operand">3</e>
+        <e type="function" preserve="true" args="2">el</e>
+        <e type="function" preserve="true" args="1">abs</e>
+        <e type="operand">Idef</e>
+        <e type="function" preserve="true" args="1">norme</e>
+        <e type="operator" args="2">/</e>
+        <e type="operand">100</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">:</e>
+      </input>
+    </math>
+  </region>
+  <region id="46" left="27" top="1827" width="146" height="112" color="#000000" bgColor="#ffffff" fontSize="10">
+    <math>
+      <input>
+        <e type="operand">ind</e>
+        <e type="operand">1</e>
+        <e type="operand">3</e>
+        <e type="function" preserve="true" args="2">range</e>
+        <e type="operand">xdef</e>
+        <e type="operand">ind</e>
+        <e type="function" preserve="true" args="2">el</e>
+        <e type="operand">10</e>
+        <e type="operator" args="2">&lt;</e>
+        <e type="operand">xdef</e>
+        <e type="operand">ind</e>
+        <e type="function" preserve="true" args="2">el</e>
+        <e type="operand">0</e>
+        <e type="operator" args="2">:</e>
+        <e type="operand">xdef</e>
+        <e type="operand">ind</e>
+        <e type="function" preserve="true" args="2">el</e>
+        <e type="operand">1</e>
+        <e type="operator" args="2">:</e>
+        <e type="function" preserve="true" args="3">if</e>
+        <e type="function" preserve="true" args="3">for</e>
+      </input>
+    </math>
+  </region>
+  <region id="47" left="198" top="1881" width="88" height="62" color="#000000" bgColor="#ffffff" fontSize="10">
+    <math>
+      <input>
+        <e type="operand">xdef</e>
+      </input>
+      <result action="numeric">
+        <e type="operand">1</e>
+        <e type="operand">0</e>
+        <e type="operand">1</e>
+        <e type="operand">3</e>
+        <e type="operand">1</e>
+        <e type="function" preserve="true" args="5">mat</e>
+      </result>
+    </math>
+  </region>
+  <region id="48" left="153" top="1962" width="243" height="32" color="#000000" bgColor="#ffffff" fontSize="10">
+    <math>
+      <input>
+        <e type="operand">Nbphas</e>
+        <e type="operand">xdef</e>
+        <e type="operand">1</e>
+        <e type="function" preserve="true" args="2">el</e>
+        <e type="operand">xdef</e>
+        <e type="operand">2</e>
+        <e type="function" preserve="true" args="2">el</e>
+        <e type="operator" args="2">+</e>
+        <e type="operand">xdef</e>
+        <e type="operand">3</e>
+        <e type="function" preserve="true" args="2">el</e>
+        <e type="operator" args="2">+</e>
+        <e type="operator" args="2">:</e>
+      </input>
+    </math>
+  </region>
+  <region id="49" left="432" top="1962" width="94" height="24" border="true" color="#000000" bgColor="#ff8080" fontSize="10">
+    <math>
+      <input>
+        <e type="operand">Nbphas</e>
+      </input>
+      <result action="numeric">
+        <e type="operand">2</e>
+      </result>
+    </math>
+  </region>
+  <region id="50" left="18" top="2061" width="388" height="24" border="true" color="#000000" bgColor="#80ffff" fontSize="10">
+    <text lang="fre">
+      <p>Calcul des impédances et admittances du défaut</p>
+    </text>
+  </region>
+  <region id="51" left="36" top="2115" width="133" height="57" color="#000000" bgColor="#ffffff" fontSize="10">
+    <math>
+      <input>
+        <e type="operand">Ydef</e>
+        <e type="operand">1</e>
+        <e type="function" preserve="true" args="2">el</e>
+        <e type="operand">Idef</e>
+        <e type="operand">1</e>
+        <e type="function" preserve="true" args="2">el</e>
+        <e type="operand">Udef1</e>
+        <e type="operand">1</e>
+        <e type="function" preserve="true" args="2">el</e>
+        <e type="operator" args="2">/</e>
+        <e type="operator" args="2">:</e>
+      </input>
+    </math>
+  </region>
+  <region id="52" left="216" top="2115" width="133" height="57" color="#000000" bgColor="#ffffff" fontSize="10">
+    <math>
+      <input>
+        <e type="operand">Ydef</e>
+        <e type="operand">2</e>
+        <e type="function" preserve="true" args="2">el</e>
+        <e type="operand">Idef</e>
+        <e type="operand">2</e>
+        <e type="function" preserve="true" args="2">el</e>
+        <e type="operand">Udef1</e>
+        <e type="operand">2</e>
+        <e type="function" preserve="true" args="2">el</e>
+        <e type="operator" args="2">/</e>
+        <e type="operator" args="2">:</e>
+      </input>
+    </math>
+  </region>
+  <region id="53" left="387" top="2115" width="133" height="57" color="#000000" bgColor="#ffffff" fontSize="10">
+    <math>
+      <input>
+        <e type="operand">Ydef</e>
+        <e type="operand">3</e>
+        <e type="function" preserve="true" args="2">el</e>
+        <e type="operand">Idef</e>
+        <e type="operand">3</e>
+        <e type="function" preserve="true" args="2">el</e>
+        <e type="operand">Udef1</e>
+        <e type="operand">3</e>
+        <e type="function" preserve="true" args="2">el</e>
+        <e type="operator" args="2">/</e>
+        <e type="operator" args="2">:</e>
+      </input>
+    </math>
+  </region>
+  <region id="54" left="198" top="2196" width="232" height="71" color="#000000" bgColor="#ffff80" fontSize="10">
+    <math>
+      <input>
+        <e type="operand">Ydef</e>
+      </input>
+      <result action="numeric">
+        <e type="operand">0.2</e>
+        <e type="operand">7.3515</e>
+        <e type="operand">10</e>
+        <e type="operand">5</e>
+        <e type="operator" args="1">-</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">i</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">-</e>
+        <e type="operand">0.0005</e>
+        <e type="operand">0.0001</e>
+        <e type="operand">i</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">+</e>
+        <e type="operand">317.3283</e>
+        <e type="operand">24.7044</e>
+        <e type="operand">i</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">+</e>
+        <e type="operand">3</e>
+        <e type="operand">1</e>
+        <e type="function" preserve="true" args="5">mat</e>
+      </result>
+    </math>
+  </region>
+  <region id="55" left="18" top="2295" width="133" height="57" color="#000000" bgColor="#ffffff" fontSize="10">
+    <math>
+      <input>
+        <e type="operand">Zdef</e>
+        <e type="operand">1</e>
+        <e type="function" preserve="true" args="2">el</e>
+        <e type="operand">Udef1</e>
+        <e type="operand">1</e>
+        <e type="function" preserve="true" args="2">el</e>
+        <e type="operand">Idef</e>
+        <e type="operand">1</e>
+        <e type="function" preserve="true" args="2">el</e>
+        <e type="operator" args="2">/</e>
+        <e type="operator" args="2">:</e>
+      </input>
+    </math>
+  </region>
+  <region id="56" left="189" top="2295" width="133" height="57" color="#000000" bgColor="#ffffff" fontSize="10">
+    <math>
+      <input>
+        <e type="operand">Zdef</e>
+        <e type="operand">2</e>
+        <e type="function" preserve="true" args="2">el</e>
+        <e type="operand">Udef1</e>
+        <e type="operand">2</e>
+        <e type="function" preserve="true" args="2">el</e>
+        <e type="operand">Idef</e>
+        <e type="operand">2</e>
+        <e type="function" preserve="true" args="2">el</e>
+        <e type="operator" args="2">/</e>
+        <e type="operator" args="2">:</e>
+      </input>
+    </math>
+  </region>
+  <region id="57" left="369" top="2295" width="133" height="57" color="#000000" bgColor="#ffffff" fontSize="10">
+    <math>
+      <input>
+        <e type="operand">Zdef</e>
+        <e type="operand">3</e>
+        <e type="function" preserve="true" args="2">el</e>
+        <e type="operand">Udef1</e>
+        <e type="operand">3</e>
+        <e type="function" preserve="true" args="2">el</e>
+        <e type="operand">Idef</e>
+        <e type="operand">3</e>
+        <e type="function" preserve="true" args="2">el</e>
+        <e type="operator" args="2">/</e>
+        <e type="operator" args="2">:</e>
+      </input>
+    </math>
+  </region>
+  <region id="58" left="189" top="2367" width="248" height="62" color="#000000" bgColor="#ffff80" fontSize="10">
+    <math>
+      <input>
+        <e type="operand">Zdef</e>
+      </input>
+      <result action="numeric">
+        <e type="operand">4.9993</e>
+        <e type="operand">0.0018</e>
+        <e type="operand">i</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">+</e>
+        <e type="operand">2010.3264</e>
+        <e type="operand">460.4107</e>
+        <e type="operand">i</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">-</e>
+        <e type="operand">0.0031</e>
+        <e type="operand">0.0002</e>
+        <e type="operand">i</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">-</e>
+        <e type="operand">3</e>
+        <e type="operand">1</e>
+        <e type="function" preserve="true" args="5">mat</e>
+      </result>
+    </math>
+  </region>
+</regions>

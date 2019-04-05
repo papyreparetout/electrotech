@@ -1,0 +1,4666 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<?application progid="SMath Studio" version="0.89"?>
+<regions>
+  <settings>
+    <editable>true</editable>
+    <calculation>
+      <functions>1</functions>
+      <precision>4</precision>
+      <angle>radians</angle>
+      <fractions>decimal</fractions>
+      <recalculation>true</recalculation>
+    </calculation>
+    <dependences>
+      <assembly name="SMath Studio" version="0.89" guid="a37cba83-b69c-4c71-9992-55ff666763bd" />
+      <assembly name="Special Functions" version="1.2.3856.6823" guid="2814e667-4e12-48b1-8d51-194e480eabc5" />
+    </dependences>
+  </settings>
+  <region id="0" left="81" top="45" width="606" height="28" border="true" color="#000000" background-color="#80ffff" font-size="12">
+    <text lang="eng">
+      <p>Calcul des caractéristiques électriques d'une ligne aérienne</p>
+    </text>
+  </region>
+  <region id="1" left="45" top="126" width="112" height="28" border="true" color="#000000" background-color="#80ffff" font-size="12">
+    <text lang="eng">
+      <p>Constantes</p>
+    </text>
+  </region>
+  <region id="2" left="180" top="126" width="82" height="36" color="#000000" background-color="#ffffff" font-size="16">
+    <math fraction-type="none" optimize="1">
+      <input>
+        <e type="operand">j</e>
+        <e type="operand">1</e>
+        <e type="operator" args="1">-</e>
+        <e type="function" args="1">sqrt</e>
+        <e type="operator" args="2">←</e>
+      </input>
+    </math>
+  </region>
+  <region id="3" left="45" top="171" width="129" height="41" color="#000000" background-color="#ffffff" font-size="12">
+    <math fraction-type="none" optimize="1">
+      <input>
+        <e type="operand">μ0</e>
+        <e type="operand">4</e>
+        <e type="operand">π</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">10</e>
+        <e type="operand">7</e>
+        <e type="operator" args="1">-</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">←</e>
+      </input>
+    </math>
+  </region>
+  <region id="4" left="171" top="171" width="26" height="41" color="#000000" background-color="#ffffff" font-size="10">
+    <math fraction-type="none" optimize="1">
+      <input>
+        <e type="operand" style="unit">H</e>
+        <e type="operand" style="unit">m</e>
+        <e type="operator" args="2">/</e>
+      </input>
+    </math>
+  </region>
+  <region id="5" left="225" top="171" width="110" height="49" color="#000000" background-color="#ffffff" font-size="12">
+    <math fraction-type="none" optimize="1">
+      <input>
+        <e type="operand">Icons</e>
+        <e type="operand">μ0</e>
+        <e type="operand">2</e>
+        <e type="operand">π</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">/</e>
+        <e type="operator" args="2">←</e>
+      </input>
+    </math>
+  </region>
+  <region id="6" left="423" top="171" width="160" height="41" color="#000000" background-color="#ffffff" font-size="12">
+    <math fraction-type="none" optimize="1">
+      <input>
+        <e type="operand">ε0</e>
+        <e type="operand">8.854</e>
+        <e type="operand">10</e>
+        <e type="operand">12</e>
+        <e type="operator" args="1">-</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">←</e>
+      </input>
+    </math>
+  </region>
+  <region id="7" left="585" top="171" width="26" height="41" color="#000000" background-color="#ffffff" font-size="10">
+    <math fraction-type="none" optimize="1">
+      <input>
+        <e type="operand" style="unit">F</e>
+        <e type="operand" style="unit">m</e>
+        <e type="operator" args="2">/</e>
+      </input>
+    </math>
+  </region>
+  <region id="8" left="648" top="189" width="134" height="28" color="#000000" background-color="#ffffff" font-size="12">
+    <math fraction-type="none" optimize="1">
+      <input>
+        <e type="operand">Ccons</e>
+        <e type="operand">2</e>
+        <e type="operand">π</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">ε0</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">←</e>
+      </input>
+    </math>
+  </region>
+  <region id="9" left="45" top="216" width="201" height="28" border="true" color="#000000" background-color="#80ffff" font-size="12">
+    <text lang="eng">
+      <p>Fréquence de calcul</p>
+    </text>
+  </region>
+  <region id="10" left="405" top="216" width="192" height="28" border="true" color="#000000" background-color="#80ffff" font-size="12">
+    <text lang="eng">
+      <p>Résistivité du sol</p>
+    </text>
+  </region>
+  <region id="11" left="54" top="252" width="88" height="28" color="#000000" background-color="#ffffff" font-size="12">
+    <math fraction-type="none" optimize="1">
+      <input>
+        <e type="operand">freq</e>
+        <e type="operand">50</e>
+        <e type="operator" args="2">←</e>
+      </input>
+    </math>
+  </region>
+  <region id="12" left="135" top="252" width="30" height="24" color="#000000" background-color="#ffffff" font-size="10">
+    <math fraction-type="none" optimize="1">
+      <input>
+        <e type="operand" style="unit">Hz</e>
+      </input>
+    </math>
+  </region>
+  <region id="13" left="414" top="252" width="69" height="28" color="#000000" background-color="#ffffff" font-size="12">
+    <math fraction-type="none" optimize="1">
+      <input>
+        <e type="operand">ρ</e>
+        <e type="operand">100</e>
+        <e type="operator" args="2">←</e>
+      </input>
+    </math>
+  </region>
+  <region id="14" left="477" top="252" width="53" height="24" color="#000000" background-color="#ffffff" font-size="10">
+    <math fraction-type="none" optimize="1">
+      <input>
+        <e type="operand" style="unit">ohm</e>
+        <e type="operand" style="unit">m</e>
+        <e type="operator" args="2">*</e>
+      </input>
+    </math>
+  </region>
+  <region id="15" left="54" top="279" width="766" height="28" border="true" color="#000000" background-color="#80ffff" font-size="12">
+    <text lang="fre">
+      <p>Résistance des conducteurs (6 premiers phases et câbles de garde 2 suivants)</p>
+    </text>
+  </region>
+  <region id="16" left="819" top="306" width="198" height="184" color="#000000" background-color="#ffffff" font-size="12">
+    <math fraction-type="none" optimize="1">
+      <input>
+        <e type="operand">Rcond</e>
+        <e type="operand">10</e>
+        <e type="operand">3</e>
+        <e type="operator" args="1">-</e>
+        <e type="operator" args="2">^</e>
+        <e type="operand">0.0583</e>
+        <e type="operand">0.0583</e>
+        <e type="operand">0.0583</e>
+        <e type="operand">0.0583</e>
+        <e type="operand">0.0583</e>
+        <e type="operand">0.0583</e>
+        <e type="operand">0.3</e>
+        <e type="operand">0.3</e>
+        <e type="operand">8</e>
+        <e type="operand">1</e>
+        <e type="function" args="10">mat</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">←</e>
+      </input>
+    </math>
+  </region>
+  <region id="17" left="54" top="342" width="221" height="28" border="true" color="#000000" background-color="#80ffff" font-size="12">
+    <text lang="eng">
+      <p>Géométrie de la ligne</p>
+    </text>
+  </region>
+  <region id="18" left="54" top="378" width="667" height="28" border="true" color="#000000" background-color="#80ffff" font-size="12">
+    <text lang="eng">
+      <p>Hauteurs par rapport au sol (6 premiers phases et câbles de garde)</p>
+    </text>
+  </region>
+  <region id="19" left="1017" top="387" width="43" height="41" color="#000000" background-color="#ffffff" font-size="10">
+    <math fraction-type="none" optimize="1">
+      <input>
+        <e type="operand" style="unit">ohm</e>
+        <e type="operand" style="unit">m</e>
+        <e type="operator" args="2">/</e>
+      </input>
+    </math>
+  </region>
+  <region id="20" left="144" top="414" width="87" height="184" color="#000000" background-color="#ffffff" font-size="12">
+    <math fraction-type="none" optimize="1">
+      <input>
+        <e type="operand">H</e>
+        <e type="operand">21.2</e>
+        <e type="operand">32</e>
+        <e type="operand">21.2</e>
+        <e type="operand">21.2</e>
+        <e type="operand">32</e>
+        <e type="operand">21.2</e>
+        <e type="operand">38.2</e>
+        <e type="operand">38.2</e>
+        <e type="operand">8</e>
+        <e type="operand">1</e>
+        <e type="function" args="10">mat</e>
+        <e type="operator" args="2">←</e>
+      </input>
+    </math>
+  </region>
+  <region id="21" left="234" top="504" width="22" height="24" color="#000000" background-color="#ffffff" font-size="10">
+    <math fraction-type="none" optimize="1">
+      <input>
+        <e type="operand" style="unit">m</e>
+      </input>
+    </math>
+  </region>
+  <region id="22" left="54" top="594" width="528" height="28" border="true" color="#000000" background-color="#80ffff" font-size="12">
+    <text lang="eng">
+      <p>Positions horizontales par rapport à l'axe du pylône</p>
+    </text>
+  </region>
+  <region id="23" left="126" top="621" width="96" height="184" color="#000000" background-color="#ffffff" font-size="12">
+    <math fraction-type="none" optimize="1">
+      <input>
+        <e type="operand">X</e>
+        <e type="operand">13.7</e>
+        <e type="operator" args="1">-</e>
+        <e type="operand">7.2</e>
+        <e type="operator" args="1">-</e>
+        <e type="operand">5.2</e>
+        <e type="operator" args="1">-</e>
+        <e type="operand">13.2</e>
+        <e type="operand">7.2</e>
+        <e type="operand">5.2</e>
+        <e type="operand">9.6</e>
+        <e type="operator" args="1">-</e>
+        <e type="operand">9.6</e>
+        <e type="operand">8</e>
+        <e type="operand">1</e>
+        <e type="function" args="10">mat</e>
+        <e type="operator" args="2">←</e>
+      </input>
+    </math>
+  </region>
+  <region id="24" left="225" top="702" width="22" height="24" color="#000000" background-color="#ffffff" font-size="10">
+    <math fraction-type="none" optimize="1">
+      <input>
+        <e type="operand" style="unit">m</e>
+      </input>
+    </math>
+  </region>
+  <region id="25" left="45" top="801" width="538" height="28" border="true" color="#000000" background-color="#80ffff" font-size="12">
+    <text lang="eng">
+      <p>Conducteur équivalent pour un faisceau de conducteurs</p>
+    </text>
+  </region>
+  <region id="26" left="45" top="846" width="350" height="28" border="true" color="#000000" background-color="#80ffff" font-size="12">
+    <text lang="eng">
+      <p>nombre de conducteurs du faisceau:</p>
+    </text>
+  </region>
+  <region id="27" left="432" top="846" width="138" height="28" color="#000000" background-color="#ffffff" font-size="12">
+    <math fraction-type="none" optimize="1">
+      <input>
+        <e type="operand">ncondfaisc</e>
+        <e type="operand">2</e>
+        <e type="operator" args="2">←</e>
+      </input>
+    </math>
+  </region>
+  <region id="28" left="432" top="882" width="148" height="28" color="#000000" background-color="#ffffff" font-size="12">
+    <math fraction-type="none" optimize="1">
+      <input>
+        <e type="operand">distfaisc</e>
+        <e type="operand">0.6</e>
+        <e type="operator" args="2">←</e>
+      </input>
+    </math>
+  </region>
+  <region id="29" left="54" top="891" width="280" height="28" border="true" color="#000000" background-color="#80ffff" font-size="12">
+    <text lang="eng">
+      <p>distance entre conducteurs:</p>
+    </text>
+  </region>
+  <region id="30" left="549" top="918" width="42" height="33" color="#000000" background-color="#ffffff" font-size="10">
+    <math fraction-type="none" optimize="1">
+      <input>
+        <e type="operand" style="unit">mm</e>
+        <e type="operand">2</e>
+        <e type="operator" args="2">^</e>
+      </input>
+    </math>
+  </region>
+  <region id="31" left="459" top="927" width="98" height="28" color="#000000" background-color="#ffffff" font-size="12">
+    <math fraction-type="none" optimize="1">
+      <input>
+        <e type="operand">sect</e>
+        <e type="operand">570</e>
+        <e type="operator" args="2">←</e>
+      </input>
+    </math>
+  </region>
+  <region id="32" left="54" top="936" width="330" height="28" border="true" color="#000000" background-color="#80ffff" font-size="12">
+    <text lang="eng">
+      <p>section des conducteurs de phase</p>
+    </text>
+  </region>
+  <region id="33" left="54" top="981" width="187" height="64" color="#000000" background-color="#ffffff" font-size="12">
+    <math fraction-type="none" optimize="1">
+      <input>
+        <e type="operand">rcond</e>
+        <e type="operand">sect</e>
+        <e type="operand">10</e>
+        <e type="operand">6</e>
+        <e type="operator" args="1">-</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">π</e>
+        <e type="operator" args="2">/</e>
+        <e type="function" args="1">sqrt</e>
+        <e type="operator" args="2">←</e>
+      </input>
+    </math>
+  </region>
+  <region id="34" left="279" top="999" width="150" height="28" color="#000000" background-color="#ffffff" font-size="12">
+    <math optimize="1">
+      <input>
+        <e type="operand">rcond</e>
+      </input>
+      <result action="numeric">
+        <e type="operand">0.0135</e>
+      </result>
+    </math>
+  </region>
+  <region id="35" left="405" top="999" width="22" height="24" color="#000000" background-color="#ffffff" font-size="10">
+    <math fraction-type="none" optimize="1">
+      <input>
+        <e type="operand" style="unit">m</e>
+      </input>
+    </math>
+  </region>
+  <region id="36" left="54" top="1062" width="290" height="28" border="true" color="#000000" background-color="#80ffff" font-size="12">
+    <text lang="eng">
+      <p>Rayon géométrique équivalent</p>
+    </text>
+  </region>
+  <region id="37" left="63" top="1107" width="593" height="90" color="#000000" background-color="#ffffff" font-size="12">
+    <math fraction-type="none" optimize="1">
+      <input>
+        <e type="operand">i</e>
+        <e type="operand">1</e>
+        <e type="operand">6</e>
+        <e type="function" args="2">range</e>
+        <e type="operand">r</e>
+        <e type="operand">i</e>
+        <e type="function" args="2">el</e>
+        <e type="operand">ncondfaisc</e>
+        <e type="operand">rcond</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">distfaisc</e>
+        <e type="operand">2</e>
+        <e type="operator" args="2">/</e>
+        <e type="bracket">(</e>
+        <e type="operand">ncondfaisc</e>
+        <e type="operand">1</e>
+        <e type="operator" args="2">-</e>
+        <e type="bracket">(</e>
+        <e type="operator" args="2">^</e>
+        <e type="bracket">(</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">ncondfaisc</e>
+        <e type="function" args="2">nthroot</e>
+        <e type="operator" args="2">←</e>
+        <e type="function" args="3">for</e>
+      </input>
+    </math>
+  </region>
+  <region id="38" left="513" top="1206" width="42" height="33" color="#000000" background-color="#ffffff" font-size="10">
+    <math fraction-type="none" optimize="1">
+      <input>
+        <e type="operand" style="unit">mm</e>
+        <e type="operand">2</e>
+        <e type="operator" args="2">^</e>
+      </input>
+    </math>
+  </region>
+  <region id="39" left="63" top="1215" width="280" height="28" border="true" color="#000000" background-color="#80ffff" font-size="12">
+    <text lang="eng">
+      <p>Section des câbles de garde</p>
+    </text>
+  </region>
+  <region id="40" left="378" top="1215" width="138" height="28" color="#000000" background-color="#ffffff" font-size="12">
+    <math fraction-type="none" optimize="1">
+      <input>
+        <e type="operand">sectgard</e>
+        <e type="operand">228</e>
+        <e type="operator" args="2">←</e>
+      </input>
+    </math>
+  </region>
+  <region id="41" left="81" top="1260" width="205" height="64" color="#000000" background-color="#ffffff" font-size="12">
+    <math fraction-type="none" optimize="1">
+      <input>
+        <e type="operand">r</e>
+        <e type="operand">7</e>
+        <e type="function" args="2">el</e>
+        <e type="operand">sectgard</e>
+        <e type="operand">10</e>
+        <e type="operand">6</e>
+        <e type="operator" args="1">-</e>
+        <e type="operator" args="2">^</e>
+        <e type="operand">π</e>
+        <e type="operator" args="2">/</e>
+        <e type="operator" args="2">*</e>
+        <e type="function" args="1">sqrt</e>
+        <e type="operator" args="2">←</e>
+      </input>
+    </math>
+  </region>
+  <region id="42" left="324" top="1278" width="83" height="40" color="#000000" background-color="#ffffff" font-size="12">
+    <math fraction-type="none" optimize="1">
+      <input>
+        <e type="operand">r</e>
+        <e type="operand">8</e>
+        <e type="function" args="2">el</e>
+        <e type="operand">r</e>
+        <e type="operand">7</e>
+        <e type="function" args="2">el</e>
+        <e type="operator" args="2">←</e>
+      </input>
+    </math>
+  </region>
+  <region id="43" top="1323" color="#000000" background-color="#ffffff">
+    <area single="true" is-collapsed="true" name="" show-name="false" />
+  </region>
+  <region id="44" left="63" top="1341" width="350" height="28" border="true" color="#000000" background-color="#80ffff" font-size="12">
+    <text lang="eng">
+      <p>Calcul de la matrice des capacités</p>
+    </text>
+  </region>
+  <region id="45" left="63" top="1377" width="696" height="28" border="true" color="#000000" background-color="#80ffff" font-size="12">
+    <text lang="eng">
+      <p>calcul des distances entre conducteurs et entre conducteurs et images</p>
+    </text>
+  </region>
+  <region id="46" left="81" top="1422" width="388" height="268" color="#000000" background-color="#ffffff" font-size="12">
+    <math fraction-type="none" optimize="1">
+      <input>
+        <e type="operand">in</e>
+        <e type="operand">1</e>
+        <e type="operand">8</e>
+        <e type="function" args="2">range</e>
+        <e type="operand">jn</e>
+        <e type="operand">1</e>
+        <e type="operand">8</e>
+        <e type="function" args="2">range</e>
+        <e type="operand">D</e>
+        <e type="operand">in</e>
+        <e type="operand">jn</e>
+        <e type="function" args="3">el</e>
+        <e type="operand">H</e>
+        <e type="operand">in</e>
+        <e type="function" args="2">el</e>
+        <e type="operand">H</e>
+        <e type="operand">jn</e>
+        <e type="function" args="2">el</e>
+        <e type="operator" args="2">-</e>
+        <e type="bracket">(</e>
+        <e type="operand">2</e>
+        <e type="operator" args="2">^</e>
+        <e type="operand">X</e>
+        <e type="operand">in</e>
+        <e type="function" args="2">el</e>
+        <e type="operand">X</e>
+        <e type="operand">jn</e>
+        <e type="function" args="2">el</e>
+        <e type="operator" args="2">-</e>
+        <e type="bracket">(</e>
+        <e type="operand">2</e>
+        <e type="operator" args="2">^</e>
+        <e type="bracket">(</e>
+        <e type="operator" args="2">+</e>
+        <e type="bracket">(</e>
+        <e type="operator" args="2">←</e>
+        <e type="operand">HC</e>
+        <e type="operand">in</e>
+        <e type="operand">jn</e>
+        <e type="function" args="3">el</e>
+        <e type="operand">H</e>
+        <e type="operand">in</e>
+        <e type="function" args="2">el</e>
+        <e type="operand">H</e>
+        <e type="operand">jn</e>
+        <e type="function" args="2">el</e>
+        <e type="operator" args="2">+</e>
+        <e type="bracket">(</e>
+        <e type="operand">2</e>
+        <e type="operator" args="2">^</e>
+        <e type="operand">X</e>
+        <e type="operand">in</e>
+        <e type="function" args="2">el</e>
+        <e type="operand">X</e>
+        <e type="operand">jn</e>
+        <e type="function" args="2">el</e>
+        <e type="operator" args="2">-</e>
+        <e type="bracket">(</e>
+        <e type="operand">2</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">+</e>
+        <e type="bracket">(</e>
+        <e type="operator" args="2">←</e>
+        <e type="operand">D</e>
+        <e type="operand">in</e>
+        <e type="operand">in</e>
+        <e type="function" args="3">el</e>
+        <e type="operand">r</e>
+        <e type="operand">in</e>
+        <e type="function" args="2">el</e>
+        <e type="operand">2</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">←</e>
+        <e type="operand">P</e>
+        <e type="operand">in</e>
+        <e type="operand">jn</e>
+        <e type="function" args="3">el</e>
+        <e type="operand">HC</e>
+        <e type="operand">in</e>
+        <e type="operand">jn</e>
+        <e type="function" args="3">el</e>
+        <e type="operand">D</e>
+        <e type="operand">in</e>
+        <e type="operand">jn</e>
+        <e type="function" args="3">el</e>
+        <e type="operator" args="2">/</e>
+        <e type="function" args="1">ln</e>
+        <e type="operand">1</e>
+        <e type="operand">Ccons</e>
+        <e type="operand">2</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">/</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">←</e>
+        <e type="operand">4</e>
+        <e type="operand">1</e>
+        <e type="function" args="6">line</e>
+        <e type="function" args="3">for</e>
+        <e type="function" args="3">for</e>
+      </input>
+    </math>
+  </region>
+  <region id="47" left="486" top="1485" width="360" height="28" color="#000000" background-color="#ff0000" font-size="12">
+    <text lang="eng">
+      <p>le séparateur entre indice est le ;</p>
+    </text>
+  </region>
+  <region id="48" left="72" top="1701" width="101" height="41" color="#000000" background-color="#ffffff" font-size="12">
+    <math fraction-type="none" optimize="1">
+      <input>
+        <e type="operand">P</e>
+        <e type="operand">P</e>
+        <e type="operand">10</e>
+        <e type="operand">9</e>
+        <e type="operator" args="1">-</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">←</e>
+      </input>
+    </math>
+  </region>
+  <region id="49" left="72" top="1755" width="226" height="28" border="true" color="#000000" background-color="#80ffff" font-size="12">
+    <text lang="eng">
+      <p>Matrice des capacités </p>
+    </text>
+  </region>
+  <region id="50" left="72" top="1782" width="744" height="184" color="#000000" background-color="#80ffff" font-size="12">
+    <math optimize="1">
+      <input>
+        <e type="operand">P</e>
+        <e type="operand">1</e>
+        <e type="operator" args="1">-</e>
+        <e type="operator" args="2">^</e>
+        <e type="operand">1000</e>
+        <e type="operator" args="2">*</e>
+      </input>
+      <result action="numeric">
+        <e type="operand">10.1556</e>
+        <e type="operand">1.3046</e>
+        <e type="operator" args="1">-</e>
+        <e type="operand">1.986</e>
+        <e type="operator" args="1">-</e>
+        <e type="operand">0.2083</e>
+        <e type="operator" args="1">-</e>
+        <e type="operand">0.3485</e>
+        <e type="operator" args="1">-</e>
+        <e type="operand">0.4823</e>
+        <e type="operator" args="1">-</e>
+        <e type="operand">0.6083</e>
+        <e type="operator" args="1">-</e>
+        <e type="operand">0.1906</e>
+        <e type="operator" args="1">-</e>
+        <e type="operand">1.3046</e>
+        <e type="operator" args="1">-</e>
+        <e type="operand">10.3455</e>
+        <e type="operand">1.3986</e>
+        <e type="operator" args="1">-</e>
+        <e type="operand">0.3557</e>
+        <e type="operator" args="1">-</e>
+        <e type="operand">1.084</e>
+        <e type="operator" args="1">-</e>
+        <e type="operand">0.6916</e>
+        <e type="operator" args="1">-</e>
+        <e type="operand">1.9512</e>
+        <e type="operator" args="1">-</e>
+        <e type="operand">0.5928</e>
+        <e type="operator" args="1">-</e>
+        <e type="operand">1.986</e>
+        <e type="operator" args="1">-</e>
+        <e type="operand">1.3986</e>
+        <e type="operator" args="1">-</e>
+        <e type="operand">10.6029</e>
+        <e type="operand">0.5021</e>
+        <e type="operator" args="1">-</e>
+        <e type="operand">0.6936</e>
+        <e type="operator" args="1">-</e>
+        <e type="operand">1.4691</e>
+        <e type="operator" args="1">-</e>
+        <e type="operand">0.4405</e>
+        <e type="operator" args="1">-</e>
+        <e type="operand">0.2634</e>
+        <e type="operator" args="1">-</e>
+        <e type="operand">0.2083</e>
+        <e type="operator" args="1">-</e>
+        <e type="operand">0.3557</e>
+        <e type="operator" args="1">-</e>
+        <e type="operand">0.5021</e>
+        <e type="operator" args="1">-</e>
+        <e type="operand">10.2173</e>
+        <e type="operand">1.3198</e>
+        <e type="operator" args="1">-</e>
+        <e type="operand">2.0912</e>
+        <e type="operator" args="1">-</e>
+        <e type="operand">0.1913</e>
+        <e type="operator" args="1">-</e>
+        <e type="operand">0.6019</e>
+        <e type="operator" args="1">-</e>
+        <e type="operand">0.3485</e>
+        <e type="operator" args="1">-</e>
+        <e type="operand">1.084</e>
+        <e type="operator" args="1">-</e>
+        <e type="operand">0.6936</e>
+        <e type="operator" args="1">-</e>
+        <e type="operand">1.3198</e>
+        <e type="operator" args="1">-</e>
+        <e type="operand">10.348</e>
+        <e type="operand">1.3845</e>
+        <e type="operator" args="1">-</e>
+        <e type="operand">0.5926</e>
+        <e type="operator" args="1">-</e>
+        <e type="operand">1.9517</e>
+        <e type="operator" args="1">-</e>
+        <e type="operand">0.4823</e>
+        <e type="operator" args="1">-</e>
+        <e type="operand">0.6916</e>
+        <e type="operator" args="1">-</e>
+        <e type="operand">1.4691</e>
+        <e type="operator" args="1">-</e>
+        <e type="operand">2.0912</e>
+        <e type="operator" args="1">-</e>
+        <e type="operand">1.3845</e>
+        <e type="operator" args="1">-</e>
+        <e type="operand">10.6408</e>
+        <e type="operand">0.2621</e>
+        <e type="operator" args="1">-</e>
+        <e type="operand">0.4366</e>
+        <e type="operator" args="1">-</e>
+        <e type="operand">0.6083</e>
+        <e type="operator" args="1">-</e>
+        <e type="operand">1.9512</e>
+        <e type="operator" args="1">-</e>
+        <e type="operand">0.4405</e>
+        <e type="operator" args="1">-</e>
+        <e type="operand">0.1913</e>
+        <e type="operator" args="1">-</e>
+        <e type="operand">0.5926</e>
+        <e type="operator" args="1">-</e>
+        <e type="operand">0.2621</e>
+        <e type="operator" args="1">-</e>
+        <e type="operand">6.9675</e>
+        <e type="operand">0.4659</e>
+        <e type="operator" args="1">-</e>
+        <e type="operand">0.1906</e>
+        <e type="operator" args="1">-</e>
+        <e type="operand">0.5928</e>
+        <e type="operator" args="1">-</e>
+        <e type="operand">0.2634</e>
+        <e type="operator" args="1">-</e>
+        <e type="operand">0.6019</e>
+        <e type="operator" args="1">-</e>
+        <e type="operand">1.9517</e>
+        <e type="operator" args="1">-</e>
+        <e type="operand">0.4366</e>
+        <e type="operator" args="1">-</e>
+        <e type="operand">0.4659</e>
+        <e type="operator" args="1">-</e>
+        <e type="operand">6.9665</e>
+        <e type="operand">8</e>
+        <e type="operand">8</e>
+        <e type="function" args="66">mat</e>
+      </result>
+    </math>
+  </region>
+  <region id="51" left="738" top="1845" width="34" height="41" color="#000000" background-color="#ffffff" font-size="10">
+    <math fraction-type="none" optimize="1">
+      <input>
+        <e type="operand" style="unit">nF</e>
+        <e type="operand" style="unit">km</e>
+        <e type="operator" args="2">/</e>
+      </input>
+    </math>
+  </region>
+  <region id="52" top="2043" color="#000000" background-color="#ffffff">
+    <area single="true" is-collapsed="true" name="" show-name="false" />
+  </region>
+  <region id="53" left="63" top="2115" width="310" height="28" border="true" color="#000000" background-color="#80ffff" font-size="12">
+    <text lang="eng">
+      <p>Calcul de la matrice impédance</p>
+    </text>
+  </region>
+  <region id="54" left="72" top="2151" width="330" height="28" border="true" color="#000000" background-color="#80ffff" font-size="12">
+    <text lang="eng">
+      <p>Impédance propre des conducteurs</p>
+    </text>
+  </region>
+  <region id="55" left="72" top="2187" width="505" height="129" color="#000000" background-color="#ffffff" font-size="12">
+    <math fraction-type="none" optimize="1">
+      <input>
+        <e type="operand">in</e>
+        <e type="operand">1</e>
+        <e type="operand">6</e>
+        <e type="function" args="2">range</e>
+        <e type="operand">jn</e>
+        <e type="operand">1</e>
+        <e type="operand">6</e>
+        <e type="function" args="2">range</e>
+        <e type="operand">z</e>
+        <e type="operand">in</e>
+        <e type="operand">jn</e>
+        <e type="function" args="3">el</e>
+        <e type="operand">0</e>
+        <e type="operator" args="2">←</e>
+        <e type="operand">z</e>
+        <e type="operand">in</e>
+        <e type="operand">in</e>
+        <e type="function" args="3">el</e>
+        <e type="operand">Rcond</e>
+        <e type="operand">in</e>
+        <e type="function" args="2">el</e>
+        <e type="operand">Icons</e>
+        <e type="operand">4</e>
+        <e type="operator" args="2">/</e>
+        <e type="bracket">(</e>
+        <e type="operand">2</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">π</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">freq</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">j</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">+</e>
+        <e type="bracket">(</e>
+        <e type="operand">1</e>
+        <e type="operand">ncondfaisc</e>
+        <e type="operator" args="2">/</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">←</e>
+        <e type="operand">2</e>
+        <e type="operand">1</e>
+        <e type="function" args="4">line</e>
+        <e type="function" args="3">for</e>
+        <e type="function" args="3">for</e>
+      </input>
+    </math>
+  </region>
+  <region id="56" left="90" top="2322" width="369" height="73" color="#000000" background-color="#ffffff" font-size="12">
+    <math fraction-type="none" optimize="1">
+      <input>
+        <e type="operand">in</e>
+        <e type="operand">7</e>
+        <e type="operand">8</e>
+        <e type="function" args="2">range</e>
+        <e type="operand">z</e>
+        <e type="operand">in</e>
+        <e type="operand">in</e>
+        <e type="function" args="3">el</e>
+        <e type="operand">Rcond</e>
+        <e type="operand">in</e>
+        <e type="function" args="2">el</e>
+        <e type="operand">Icons</e>
+        <e type="operand">4</e>
+        <e type="operator" args="2">/</e>
+        <e type="bracket">(</e>
+        <e type="operand">2</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">π</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">freq</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">j</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">+</e>
+        <e type="bracket">(</e>
+        <e type="operator" args="2">←</e>
+        <e type="function" args="3">for</e>
+      </input>
+    </math>
+  </region>
+  <region id="57" left="81" top="2394" width="598" height="28" border="true" color="#000000" background-color="#80ffff" font-size="12">
+    <text lang="eng">
+      <p>Profondeur de pénétration dans le sol des filets de courant</p>
+    </text>
+  </region>
+  <region id="58" left="81" top="2412" width="211" height="72" color="#000000" background-color="#ffffff" font-size="12">
+    <math fraction-type="none" optimize="1">
+      <input>
+        <e type="operand">hsol</e>
+        <e type="operand">1</e>
+        <e type="operand">2</e>
+        <e type="operand">π</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">freq</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">μ0</e>
+        <e type="operand">ρ</e>
+        <e type="operator" args="2">/</e>
+        <e type="operator" args="2">*</e>
+        <e type="function" args="1">sqrt</e>
+        <e type="operand">j</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">/</e>
+        <e type="operator" args="2">←</e>
+      </input>
+    </math>
+  </region>
+  <region id="59" left="333" top="2430" width="187" height="28" color="#000000" background-color="#ffffff" font-size="12">
+    <math optimize="1">
+      <input>
+        <e type="operand">hsol</e>
+      </input>
+      <result action="numeric">
+        <e type="operand">503.2921</e>
+        <e type="operand">i</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="1">-</e>
+      </result>
+    </math>
+  </region>
+  <region id="60" left="81" top="2493" width="172" height="60" color="#000000" background-color="#ffffff" font-size="12">
+    <math fraction-type="none" optimize="1">
+      <input>
+        <e type="operand">in</e>
+        <e type="operand">1</e>
+        <e type="operand">8</e>
+        <e type="function" args="2">range</e>
+        <e type="operand">H</e>
+        <e type="operand">in</e>
+        <e type="function" args="2">el</e>
+        <e type="operand">H</e>
+        <e type="operand">in</e>
+        <e type="function" args="2">el</e>
+        <e type="operand">hsol</e>
+        <e type="operator" args="2">+</e>
+        <e type="operator" args="2">←</e>
+        <e type="function" args="3">for</e>
+      </input>
+    </math>
+  </region>
+  <region id="61" left="81" top="2565" width="984" height="28" border="true" color="#000000" background-color="#80ffff" font-size="12">
+    <text lang="eng">
+      <p>Calcul de la matrice des distances entre conducteurs et de leur distance par rapport au sol fictif</p>
+    </text>
+  </region>
+  <region id="62" left="90" top="2610" width="574" height="272" color="#000000" background-color="#ffffff" font-size="12">
+    <math fraction-type="none" optimize="1">
+      <input>
+        <e type="operand">in</e>
+        <e type="operand">1</e>
+        <e type="operand">8</e>
+        <e type="function" args="2">range</e>
+        <e type="operand">jn</e>
+        <e type="operand">1</e>
+        <e type="operand">8</e>
+        <e type="function" args="2">range</e>
+        <e type="operand">DL</e>
+        <e type="operand">in</e>
+        <e type="operand">jn</e>
+        <e type="function" args="3">el</e>
+        <e type="operand">H</e>
+        <e type="operand">in</e>
+        <e type="function" args="2">el</e>
+        <e type="operand">H</e>
+        <e type="operand">jn</e>
+        <e type="function" args="2">el</e>
+        <e type="operator" args="2">-</e>
+        <e type="bracket">(</e>
+        <e type="operand">2</e>
+        <e type="operator" args="2">^</e>
+        <e type="operand">X</e>
+        <e type="operand">in</e>
+        <e type="function" args="2">el</e>
+        <e type="operand">X</e>
+        <e type="operand">jn</e>
+        <e type="function" args="2">el</e>
+        <e type="operator" args="2">-</e>
+        <e type="bracket">(</e>
+        <e type="operand">2</e>
+        <e type="operator" args="2">^</e>
+        <e type="bracket">(</e>
+        <e type="operator" args="2">+</e>
+        <e type="bracket">(</e>
+        <e type="operator" args="2">←</e>
+        <e type="operand">HL</e>
+        <e type="operand">in</e>
+        <e type="operand">jn</e>
+        <e type="function" args="3">el</e>
+        <e type="operand">H</e>
+        <e type="operand">in</e>
+        <e type="function" args="2">el</e>
+        <e type="operand">H</e>
+        <e type="operand">jn</e>
+        <e type="function" args="2">el</e>
+        <e type="operator" args="2">+</e>
+        <e type="bracket">(</e>
+        <e type="operand">2</e>
+        <e type="operator" args="2">^</e>
+        <e type="operand">X</e>
+        <e type="operand">in</e>
+        <e type="function" args="2">el</e>
+        <e type="operand">X</e>
+        <e type="operand">jn</e>
+        <e type="function" args="2">el</e>
+        <e type="operator" args="2">-</e>
+        <e type="bracket">(</e>
+        <e type="operand">2</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">+</e>
+        <e type="bracket">(</e>
+        <e type="operator" args="2">←</e>
+        <e type="operand">DL</e>
+        <e type="operand">in</e>
+        <e type="operand">in</e>
+        <e type="function" args="3">el</e>
+        <e type="operand">r</e>
+        <e type="operand">in</e>
+        <e type="function" args="2">el</e>
+        <e type="operand">2</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">←</e>
+        <e type="operand">Z</e>
+        <e type="operand">in</e>
+        <e type="operand">jn</e>
+        <e type="function" args="3">el</e>
+        <e type="operand">HL</e>
+        <e type="operand">in</e>
+        <e type="operand">jn</e>
+        <e type="function" args="3">el</e>
+        <e type="operand">DL</e>
+        <e type="operand">in</e>
+        <e type="operand">jn</e>
+        <e type="function" args="3">el</e>
+        <e type="operator" args="2">/</e>
+        <e type="function" args="1">abs</e>
+        <e type="function" args="1">ln</e>
+        <e type="operand">j</e>
+        <e type="operand">HL</e>
+        <e type="operand">in</e>
+        <e type="operand">jn</e>
+        <e type="function" args="3">el</e>
+        <e type="operand">DL</e>
+        <e type="operand">in</e>
+        <e type="operand">jn</e>
+        <e type="function" args="3">el</e>
+        <e type="operator" args="2">/</e>
+        <e type="function" args="1">arg</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">+</e>
+        <e type="bracket">(</e>
+        <e type="operand">Icons</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">2</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">π</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">freq</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">j</e>
+        <e type="operand">2</e>
+        <e type="operator" args="2">/</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">←</e>
+        <e type="operand">4</e>
+        <e type="operand">1</e>
+        <e type="function" args="6">line</e>
+        <e type="function" args="3">for</e>
+        <e type="function" args="3">for</e>
+      </input>
+    </math>
+  </region>
+  <region id="63" left="486" top="2763" width="604" height="24" border="true" color="#000000" background-color="#ff0000" font-size="10">
+    <text lang="fre">
+      <p>Remplacement du ln(complexe) par la fonction équivalente ln(|z|)+jarg(z)</p>
+    </text>
+  </region>
+  <region id="64" left="90" top="2898" width="330" height="28" border="true" color="#000000" background-color="#80ffff" font-size="12">
+    <text lang="eng">
+      <p>Matrice des impédances linéiques</p>
+    </text>
+  </region>
+  <region id="65" left="90" top="2943" width="102" height="28" color="#000000" background-color="#ffffff" font-size="12">
+    <math fraction-type="none" optimize="1">
+      <input>
+        <e type="operand">Zlin</e>
+        <e type="operand">Z</e>
+        <e type="operand">z</e>
+        <e type="operator" args="2">+</e>
+        <e type="operator" args="2">←</e>
+      </input>
+    </math>
+  </region>
+  <region id="66" left="90" top="2988" width="2185" height="288" color="#000000" background-color="#ffffff" font-size="12">
+    <math optimize="1">
+      <input>
+        <e type="operand">Zlin</e>
+      </input>
+      <result action="numeric">
+        <e type="operand">1.252</e>
+        <e type="operand">10</e>
+        <e type="operand">4</e>
+        <e type="operator" args="1">-</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">5.9372</e>
+        <e type="operand">10</e>
+        <e type="operand">4</e>
+        <e type="operator" args="1">-</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">i</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">+</e>
+        <e type="operand">9.5378</e>
+        <e type="operand">10</e>
+        <e type="operand">5</e>
+        <e type="operator" args="1">-</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">2.753</e>
+        <e type="operand">10</e>
+        <e type="operand">4</e>
+        <e type="operator" args="1">-</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">i</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">+</e>
+        <e type="operand">9.6051</e>
+        <e type="operand">10</e>
+        <e type="operand">5</e>
+        <e type="operator" args="1">-</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">3.0003</e>
+        <e type="operand">10</e>
+        <e type="operand">4</e>
+        <e type="operator" args="1">-</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">i</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">+</e>
+        <e type="operand">9.6049</e>
+        <e type="operand">10</e>
+        <e type="operand">5</e>
+        <e type="operator" args="1">-</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">2.2762</e>
+        <e type="operand">10</e>
+        <e type="operand">4</e>
+        <e type="operator" args="1">-</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">i</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">+</e>
+        <e type="operand">9.5377</e>
+        <e type="operand">10</e>
+        <e type="operand">5</e>
+        <e type="operator" args="1">-</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">2.3609</e>
+        <e type="operand">10</e>
+        <e type="operand">4</e>
+        <e type="operator" args="1">-</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">i</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">+</e>
+        <e type="operand">9.605</e>
+        <e type="operand">10</e>
+        <e type="operand">5</e>
+        <e type="operator" args="1">-</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">2.4981</e>
+        <e type="operand">10</e>
+        <e type="operand">4</e>
+        <e type="operator" args="1">-</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">i</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">+</e>
+        <e type="operand">9.4992</e>
+        <e type="operand">10</e>
+        <e type="operand">5</e>
+        <e type="operator" args="1">-</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">2.5476</e>
+        <e type="operand">10</e>
+        <e type="operand">4</e>
+        <e type="operator" args="1">-</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">i</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">+</e>
+        <e type="operand">9.4991</e>
+        <e type="operand">10</e>
+        <e type="operand">5</e>
+        <e type="operator" args="1">-</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">2.233</e>
+        <e type="operand">10</e>
+        <e type="operand">4</e>
+        <e type="operator" args="1">-</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">i</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">+</e>
+        <e type="operand">9.5378</e>
+        <e type="operand">10</e>
+        <e type="operand">5</e>
+        <e type="operator" args="1">-</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">2.753</e>
+        <e type="operand">10</e>
+        <e type="operand">4</e>
+        <e type="operator" args="1">-</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">i</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">+</e>
+        <e type="operand">1.2386</e>
+        <e type="operand">10</e>
+        <e type="operand">4</e>
+        <e type="operator" args="1">-</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">5.9379</e>
+        <e type="operand">10</e>
+        <e type="operand">4</e>
+        <e type="operator" args="1">-</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">i</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">+</e>
+        <e type="operand">9.5378</e>
+        <e type="operand">10</e>
+        <e type="operand">5</e>
+        <e type="operator" args="1">-</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">2.8396</e>
+        <e type="operand">10</e>
+        <e type="operand">4</e>
+        <e type="operator" args="1">-</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">i</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">+</e>
+        <e type="operand">9.5377</e>
+        <e type="operand">10</e>
+        <e type="operand">5</e>
+        <e type="operator" args="1">-</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">2.3728</e>
+        <e type="operand">10</e>
+        <e type="operand">4</e>
+        <e type="operator" args="1">-</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">i</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">+</e>
+        <e type="operand">9.4706</e>
+        <e type="operand">10</e>
+        <e type="operand">5</e>
+        <e type="operator" args="1">-</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">2.6697</e>
+        <e type="operand">10</e>
+        <e type="operand">4</e>
+        <e type="operator" args="1">-</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">i</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">+</e>
+        <e type="operand">9.5378</e>
+        <e type="operand">10</e>
+        <e type="operand">5</e>
+        <e type="operator" args="1">-</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">2.586</e>
+        <e type="operand">10</e>
+        <e type="operand">4</e>
+        <e type="operator" args="1">-</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">i</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">+</e>
+        <e type="operand">9.4321</e>
+        <e type="operand">10</e>
+        <e type="operand">5</e>
+        <e type="operator" args="1">-</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">3.1557</e>
+        <e type="operand">10</e>
+        <e type="operand">4</e>
+        <e type="operator" args="1">-</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">i</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">+</e>
+        <e type="operand">9.432</e>
+        <e type="operand">10</e>
+        <e type="operand">5</e>
+        <e type="operator" args="1">-</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">2.533</e>
+        <e type="operand">10</e>
+        <e type="operand">4</e>
+        <e type="operator" args="1">-</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">i</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">+</e>
+        <e type="operand">9.6051</e>
+        <e type="operand">10</e>
+        <e type="operand">5</e>
+        <e type="operator" args="1">-</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">3.0003</e>
+        <e type="operand">10</e>
+        <e type="operand">4</e>
+        <e type="operator" args="1">-</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">i</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">+</e>
+        <e type="operand">9.5378</e>
+        <e type="operand">10</e>
+        <e type="operand">5</e>
+        <e type="operator" args="1">-</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">2.8396</e>
+        <e type="operand">10</e>
+        <e type="operand">4</e>
+        <e type="operator" args="1">-</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">i</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">+</e>
+        <e type="operand">1.252</e>
+        <e type="operand">10</e>
+        <e type="operand">4</e>
+        <e type="operator" args="1">-</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">5.9372</e>
+        <e type="operand">10</e>
+        <e type="operand">4</e>
+        <e type="operator" args="1">-</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">i</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">+</e>
+        <e type="operand">9.605</e>
+        <e type="operand">10</e>
+        <e type="operand">5</e>
+        <e type="operator" args="1">-</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">2.515</e>
+        <e type="operand">10</e>
+        <e type="operand">4</e>
+        <e type="operator" args="1">-</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">i</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">+</e>
+        <e type="operand">9.5378</e>
+        <e type="operand">10</e>
+        <e type="operand">5</e>
+        <e type="operator" args="1">-</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">2.586</e>
+        <e type="operand">10</e>
+        <e type="operand">4</e>
+        <e type="operator" args="1">-</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">i</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">+</e>
+        <e type="operand">9.6051</e>
+        <e type="operand">10</e>
+        <e type="operand">5</e>
+        <e type="operator" args="1">-</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">2.8735</e>
+        <e type="operand">10</e>
+        <e type="operand">4</e>
+        <e type="operator" args="1">-</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">i</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">+</e>
+        <e type="operand">9.4992</e>
+        <e type="operand">10</e>
+        <e type="operand">5</e>
+        <e type="operator" args="1">-</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">2.5449</e>
+        <e type="operand">10</e>
+        <e type="operand">4</e>
+        <e type="operator" args="1">-</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">i</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">+</e>
+        <e type="operand">9.4992</e>
+        <e type="operand">10</e>
+        <e type="operand">5</e>
+        <e type="operator" args="1">-</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">2.388</e>
+        <e type="operand">10</e>
+        <e type="operand">4</e>
+        <e type="operator" args="1">-</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">i</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">+</e>
+        <e type="operand">9.6049</e>
+        <e type="operand">10</e>
+        <e type="operand">5</e>
+        <e type="operator" args="1">-</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">2.2762</e>
+        <e type="operand">10</e>
+        <e type="operand">4</e>
+        <e type="operator" args="1">-</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">i</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">+</e>
+        <e type="operand">9.5377</e>
+        <e type="operand">10</e>
+        <e type="operand">5</e>
+        <e type="operator" args="1">-</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">2.3728</e>
+        <e type="operand">10</e>
+        <e type="operand">4</e>
+        <e type="operator" args="1">-</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">i</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">+</e>
+        <e type="operand">9.605</e>
+        <e type="operand">10</e>
+        <e type="operand">5</e>
+        <e type="operator" args="1">-</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">2.515</e>
+        <e type="operand">10</e>
+        <e type="operand">4</e>
+        <e type="operator" args="1">-</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">i</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">+</e>
+        <e type="operand">1.252</e>
+        <e type="operand">10</e>
+        <e type="operand">4</e>
+        <e type="operator" args="1">-</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">5.9372</e>
+        <e type="operand">10</e>
+        <e type="operand">4</e>
+        <e type="operator" args="1">-</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">i</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">+</e>
+        <e type="operand">9.5378</e>
+        <e type="operand">10</e>
+        <e type="operand">5</e>
+        <e type="operator" args="1">-</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">2.7656</e>
+        <e type="operand">10</e>
+        <e type="operand">4</e>
+        <e type="operator" args="1">-</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">i</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">+</e>
+        <e type="operand">9.6051</e>
+        <e type="operand">10</e>
+        <e type="operand">5</e>
+        <e type="operator" args="1">-</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">3.0384</e>
+        <e type="operand">10</e>
+        <e type="operand">4</e>
+        <e type="operator" args="1">-</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">i</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">+</e>
+        <e type="operand">9.4991</e>
+        <e type="operand">10</e>
+        <e type="operand">5</e>
+        <e type="operator" args="1">-</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">2.2418</e>
+        <e type="operand">10</e>
+        <e type="operand">4</e>
+        <e type="operator" args="1">-</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">i</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">+</e>
+        <e type="operand">9.4992</e>
+        <e type="operand">10</e>
+        <e type="operand">5</e>
+        <e type="operator" args="1">-</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">2.5515</e>
+        <e type="operand">10</e>
+        <e type="operand">4</e>
+        <e type="operator" args="1">-</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">i</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">+</e>
+        <e type="operand">9.5377</e>
+        <e type="operand">10</e>
+        <e type="operand">5</e>
+        <e type="operator" args="1">-</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">2.3609</e>
+        <e type="operand">10</e>
+        <e type="operand">4</e>
+        <e type="operator" args="1">-</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">i</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">+</e>
+        <e type="operand">9.4706</e>
+        <e type="operand">10</e>
+        <e type="operand">5</e>
+        <e type="operator" args="1">-</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">2.6697</e>
+        <e type="operand">10</e>
+        <e type="operand">4</e>
+        <e type="operator" args="1">-</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">i</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">+</e>
+        <e type="operand">9.5378</e>
+        <e type="operand">10</e>
+        <e type="operand">5</e>
+        <e type="operator" args="1">-</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">2.586</e>
+        <e type="operand">10</e>
+        <e type="operand">4</e>
+        <e type="operator" args="1">-</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">i</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">+</e>
+        <e type="operand">9.5378</e>
+        <e type="operand">10</e>
+        <e type="operand">5</e>
+        <e type="operator" args="1">-</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">2.7656</e>
+        <e type="operand">10</e>
+        <e type="operand">4</e>
+        <e type="operator" args="1">-</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">i</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">+</e>
+        <e type="operand">1.2386</e>
+        <e type="operand">10</e>
+        <e type="operand">4</e>
+        <e type="operator" args="1">-</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">5.9379</e>
+        <e type="operand">10</e>
+        <e type="operand">4</e>
+        <e type="operator" args="1">-</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">i</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">+</e>
+        <e type="operand">9.5378</e>
+        <e type="operand">10</e>
+        <e type="operand">5</e>
+        <e type="operator" args="1">-</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">2.8396</e>
+        <e type="operand">10</e>
+        <e type="operand">4</e>
+        <e type="operator" args="1">-</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">i</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">+</e>
+        <e type="operand">9.432</e>
+        <e type="operand">10</e>
+        <e type="operand">5</e>
+        <e type="operator" args="1">-</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">2.533</e>
+        <e type="operand">10</e>
+        <e type="operand">4</e>
+        <e type="operator" args="1">-</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">i</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">+</e>
+        <e type="operand">9.4321</e>
+        <e type="operand">10</e>
+        <e type="operand">5</e>
+        <e type="operator" args="1">-</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">3.1557</e>
+        <e type="operand">10</e>
+        <e type="operand">4</e>
+        <e type="operator" args="1">-</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">i</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">+</e>
+        <e type="operand">9.605</e>
+        <e type="operand">10</e>
+        <e type="operand">5</e>
+        <e type="operator" args="1">-</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">2.4981</e>
+        <e type="operand">10</e>
+        <e type="operand">4</e>
+        <e type="operator" args="1">-</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">i</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">+</e>
+        <e type="operand">9.5378</e>
+        <e type="operand">10</e>
+        <e type="operand">5</e>
+        <e type="operator" args="1">-</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">2.586</e>
+        <e type="operand">10</e>
+        <e type="operand">4</e>
+        <e type="operator" args="1">-</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">i</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">+</e>
+        <e type="operand">9.6051</e>
+        <e type="operand">10</e>
+        <e type="operand">5</e>
+        <e type="operator" args="1">-</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">2.8735</e>
+        <e type="operand">10</e>
+        <e type="operand">4</e>
+        <e type="operator" args="1">-</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">i</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">+</e>
+        <e type="operand">9.6051</e>
+        <e type="operand">10</e>
+        <e type="operand">5</e>
+        <e type="operator" args="1">-</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">3.0384</e>
+        <e type="operand">10</e>
+        <e type="operand">4</e>
+        <e type="operator" args="1">-</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">i</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">+</e>
+        <e type="operand">9.5378</e>
+        <e type="operand">10</e>
+        <e type="operand">5</e>
+        <e type="operator" args="1">-</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">2.8396</e>
+        <e type="operand">10</e>
+        <e type="operand">4</e>
+        <e type="operator" args="1">-</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">i</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">+</e>
+        <e type="operand">1.252</e>
+        <e type="operand">10</e>
+        <e type="operand">4</e>
+        <e type="operator" args="1">-</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">5.9372</e>
+        <e type="operand">10</e>
+        <e type="operand">4</e>
+        <e type="operator" args="1">-</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">i</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">+</e>
+        <e type="operand">9.4992</e>
+        <e type="operand">10</e>
+        <e type="operand">5</e>
+        <e type="operator" args="1">-</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">2.388</e>
+        <e type="operand">10</e>
+        <e type="operand">4</e>
+        <e type="operator" args="1">-</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">i</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">+</e>
+        <e type="operand">9.4992</e>
+        <e type="operand">10</e>
+        <e type="operand">5</e>
+        <e type="operator" args="1">-</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">2.5449</e>
+        <e type="operand">10</e>
+        <e type="operand">4</e>
+        <e type="operator" args="1">-</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">i</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">+</e>
+        <e type="operand">9.4992</e>
+        <e type="operand">10</e>
+        <e type="operand">5</e>
+        <e type="operator" args="1">-</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">2.5476</e>
+        <e type="operand">10</e>
+        <e type="operand">4</e>
+        <e type="operator" args="1">-</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">i</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">+</e>
+        <e type="operand">9.4321</e>
+        <e type="operand">10</e>
+        <e type="operand">5</e>
+        <e type="operator" args="1">-</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">3.1557</e>
+        <e type="operand">10</e>
+        <e type="operand">4</e>
+        <e type="operator" args="1">-</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">i</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">+</e>
+        <e type="operand">9.4992</e>
+        <e type="operand">10</e>
+        <e type="operand">5</e>
+        <e type="operator" args="1">-</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">2.5449</e>
+        <e type="operand">10</e>
+        <e type="operand">4</e>
+        <e type="operator" args="1">-</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">i</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">+</e>
+        <e type="operand">9.4991</e>
+        <e type="operand">10</e>
+        <e type="operand">5</e>
+        <e type="operator" args="1">-</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">2.2418</e>
+        <e type="operand">10</e>
+        <e type="operand">4</e>
+        <e type="operator" args="1">-</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">i</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">+</e>
+        <e type="operand">9.432</e>
+        <e type="operand">10</e>
+        <e type="operand">5</e>
+        <e type="operator" args="1">-</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">2.533</e>
+        <e type="operand">10</e>
+        <e type="operand">4</e>
+        <e type="operator" args="1">-</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">i</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">+</e>
+        <e type="operand">9.4992</e>
+        <e type="operand">10</e>
+        <e type="operand">5</e>
+        <e type="operator" args="1">-</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">2.388</e>
+        <e type="operand">10</e>
+        <e type="operand">4</e>
+        <e type="operator" args="1">-</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">i</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">+</e>
+        <e type="operand">3.9394</e>
+        <e type="operand">10</e>
+        <e type="operand">4</e>
+        <e type="operator" args="1">-</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">7.4975</e>
+        <e type="operand">10</e>
+        <e type="operand">4</e>
+        <e type="operator" args="1">-</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">i</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">+</e>
+        <e type="operand">9.3935</e>
+        <e type="operand">10</e>
+        <e type="operand">5</e>
+        <e type="operator" args="1">-</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">2.4895</e>
+        <e type="operand">10</e>
+        <e type="operand">4</e>
+        <e type="operator" args="1">-</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">i</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">+</e>
+        <e type="operand">9.4991</e>
+        <e type="operand">10</e>
+        <e type="operand">5</e>
+        <e type="operator" args="1">-</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">2.233</e>
+        <e type="operand">10</e>
+        <e type="operand">4</e>
+        <e type="operator" args="1">-</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">i</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">+</e>
+        <e type="operand">9.432</e>
+        <e type="operand">10</e>
+        <e type="operand">5</e>
+        <e type="operator" args="1">-</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">2.533</e>
+        <e type="operand">10</e>
+        <e type="operand">4</e>
+        <e type="operator" args="1">-</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">i</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">+</e>
+        <e type="operand">9.4992</e>
+        <e type="operand">10</e>
+        <e type="operand">5</e>
+        <e type="operator" args="1">-</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">2.388</e>
+        <e type="operand">10</e>
+        <e type="operand">4</e>
+        <e type="operator" args="1">-</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">i</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">+</e>
+        <e type="operand">9.4992</e>
+        <e type="operand">10</e>
+        <e type="operand">5</e>
+        <e type="operator" args="1">-</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">2.5515</e>
+        <e type="operand">10</e>
+        <e type="operand">4</e>
+        <e type="operator" args="1">-</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">i</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">+</e>
+        <e type="operand">9.4321</e>
+        <e type="operand">10</e>
+        <e type="operand">5</e>
+        <e type="operator" args="1">-</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">3.1557</e>
+        <e type="operand">10</e>
+        <e type="operand">4</e>
+        <e type="operator" args="1">-</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">i</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">+</e>
+        <e type="operand">9.4992</e>
+        <e type="operand">10</e>
+        <e type="operand">5</e>
+        <e type="operator" args="1">-</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">2.5449</e>
+        <e type="operand">10</e>
+        <e type="operand">4</e>
+        <e type="operator" args="1">-</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">i</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">+</e>
+        <e type="operand">9.3935</e>
+        <e type="operand">10</e>
+        <e type="operand">5</e>
+        <e type="operator" args="1">-</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">2.4895</e>
+        <e type="operand">10</e>
+        <e type="operand">4</e>
+        <e type="operator" args="1">-</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">i</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">+</e>
+        <e type="operand">3.9394</e>
+        <e type="operand">10</e>
+        <e type="operand">4</e>
+        <e type="operator" args="1">-</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">7.4975</e>
+        <e type="operand">10</e>
+        <e type="operand">4</e>
+        <e type="operator" args="1">-</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">i</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">+</e>
+        <e type="operand">8</e>
+        <e type="operand">8</e>
+        <e type="function" args="66">mat</e>
+      </result>
+    </math>
+  </region>
+  <region id="67" left="90" top="3303" width="231" height="28" border="true" color="#000000" background-color="#80ffff" font-size="12">
+    <text lang="eng">
+      <p>Réduction des matrices</p>
+    </text>
+  </region>
+  <region id="68" left="81" top="3330" width="281" height="30" color="#000000" background-color="#ffffff" font-size="12">
+    <math fraction-type="none" optimize="1">
+      <input>
+        <e type="operand">P1</e>
+        <e type="operand">P</e>
+        <e type="operand">1</e>
+        <e type="operand">6</e>
+        <e type="operand">1</e>
+        <e type="operand">6</e>
+        <e type="function" args="5">submatrix</e>
+        <e type="operator" args="2">←</e>
+      </input>
+    </math>
+  </region>
+  <region id="69" left="90" top="3366" width="281" height="30" color="#000000" background-color="#ffffff" font-size="12">
+    <math fraction-type="none" optimize="1">
+      <input>
+        <e type="operand">P2</e>
+        <e type="operand">P</e>
+        <e type="operand">1</e>
+        <e type="operand">6</e>
+        <e type="operand">7</e>
+        <e type="operand">8</e>
+        <e type="function" args="5">submatrix</e>
+        <e type="operator" args="2">←</e>
+      </input>
+    </math>
+  </region>
+  <region id="70" left="90" top="3402" width="281" height="30" color="#000000" background-color="#ffffff" font-size="12">
+    <math fraction-type="none" optimize="1">
+      <input>
+        <e type="operand">P3</e>
+        <e type="operand">P</e>
+        <e type="operand">7</e>
+        <e type="operand">8</e>
+        <e type="operand">1</e>
+        <e type="operand">6</e>
+        <e type="function" args="5">submatrix</e>
+        <e type="operator" args="2">←</e>
+      </input>
+    </math>
+  </region>
+  <region id="71" left="90" top="3438" width="281" height="30" color="#000000" background-color="#ffffff" font-size="12">
+    <math fraction-type="none" optimize="1">
+      <input>
+        <e type="operand">P4</e>
+        <e type="operand">P</e>
+        <e type="operand">7</e>
+        <e type="operand">8</e>
+        <e type="operand">7</e>
+        <e type="operand">8</e>
+        <e type="function" args="5">submatrix</e>
+        <e type="operator" args="2">←</e>
+      </input>
+    </math>
+  </region>
+  <region id="72" left="90" top="3474" width="202" height="41" color="#000000" background-color="#ffffff" font-size="12">
+    <math fraction-type="none" optimize="1">
+      <input>
+        <e type="operand">Pred</e>
+        <e type="operand">P1</e>
+        <e type="operand">P2</e>
+        <e type="operand">P4</e>
+        <e type="operand">1</e>
+        <e type="operator" args="1">-</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">P3</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">-</e>
+        <e type="operator" args="2">←</e>
+      </input>
+    </math>
+  </region>
+  <region id="73" left="90" top="3528" width="171" height="28" border="true" color="#000000" background-color="#80ffff" font-size="12">
+    <text lang="eng">
+      <p>Capacité réduite</p>
+    </text>
+  </region>
+  <region id="74" left="441" top="3546" width="585" height="24" color="#000000" background-color="#ff0000" font-size="10">
+    <text lang="fre">
+      <p>Cred est recopiée à la main du fait du bug sur l'invertion de matrices</p>
+    </text>
+  </region>
+  <region id="75" left="90" top="3564" width="619" height="140" color="#000000" background-color="#80ffff" font-size="12">
+    <math optimize="1">
+      <input>
+        <e type="operand">Pred</e>
+        <e type="operand">1</e>
+        <e type="operator" args="1">-</e>
+        <e type="operator" args="2">^</e>
+        <e type="operand">1000</e>
+        <e type="operator" args="2">*</e>
+      </input>
+      <result action="numeric">
+        <e type="operand">10.1556</e>
+        <e type="operand">1.3046</e>
+        <e type="operator" args="1">-</e>
+        <e type="operand">1.986</e>
+        <e type="operator" args="1">-</e>
+        <e type="operand">0.2083</e>
+        <e type="operator" args="1">-</e>
+        <e type="operand">0.3485</e>
+        <e type="operator" args="1">-</e>
+        <e type="operand">0.4823</e>
+        <e type="operator" args="1">-</e>
+        <e type="operand">1.3046</e>
+        <e type="operator" args="1">-</e>
+        <e type="operand">10.3455</e>
+        <e type="operand">1.3986</e>
+        <e type="operator" args="1">-</e>
+        <e type="operand">0.3557</e>
+        <e type="operator" args="1">-</e>
+        <e type="operand">1.084</e>
+        <e type="operator" args="1">-</e>
+        <e type="operand">0.6916</e>
+        <e type="operator" args="1">-</e>
+        <e type="operand">1.986</e>
+        <e type="operator" args="1">-</e>
+        <e type="operand">1.3986</e>
+        <e type="operator" args="1">-</e>
+        <e type="operand">10.6029</e>
+        <e type="operand">0.5021</e>
+        <e type="operator" args="1">-</e>
+        <e type="operand">0.6936</e>
+        <e type="operator" args="1">-</e>
+        <e type="operand">1.4691</e>
+        <e type="operator" args="1">-</e>
+        <e type="operand">0.2083</e>
+        <e type="operator" args="1">-</e>
+        <e type="operand">0.3557</e>
+        <e type="operator" args="1">-</e>
+        <e type="operand">0.5021</e>
+        <e type="operator" args="1">-</e>
+        <e type="operand">10.2173</e>
+        <e type="operand">1.3198</e>
+        <e type="operator" args="1">-</e>
+        <e type="operand">2.0912</e>
+        <e type="operator" args="1">-</e>
+        <e type="operand">0.3485</e>
+        <e type="operator" args="1">-</e>
+        <e type="operand">1.084</e>
+        <e type="operator" args="1">-</e>
+        <e type="operand">0.6936</e>
+        <e type="operator" args="1">-</e>
+        <e type="operand">1.3198</e>
+        <e type="operator" args="1">-</e>
+        <e type="operand">10.348</e>
+        <e type="operand">1.3845</e>
+        <e type="operator" args="1">-</e>
+        <e type="operand">0.4823</e>
+        <e type="operator" args="1">-</e>
+        <e type="operand">0.6916</e>
+        <e type="operator" args="1">-</e>
+        <e type="operand">1.4691</e>
+        <e type="operator" args="1">-</e>
+        <e type="operand">2.0912</e>
+        <e type="operator" args="1">-</e>
+        <e type="operand">1.3845</e>
+        <e type="operator" args="1">-</e>
+        <e type="operand">10.6408</e>
+        <e type="operand">6</e>
+        <e type="operand">6</e>
+        <e type="function" args="38">mat</e>
+      </result>
+    </math>
+  </region>
+  <region id="76" left="729" top="3591" width="361" height="116" color="#000000" background-color="#ffffff" font-size="10">
+    <math fraction-type="none" optimize="1">
+      <input>
+        <e type="operand">Cred</e>
+        <e type="operand">10.16</e>
+        <e type="operand">1.3</e>
+        <e type="operator" args="1">-</e>
+        <e type="operand">1.99</e>
+        <e type="operator" args="1">-</e>
+        <e type="operand">0.21</e>
+        <e type="operator" args="1">-</e>
+        <e type="operand">0.35</e>
+        <e type="operator" args="1">-</e>
+        <e type="operand">0.48</e>
+        <e type="operator" args="1">-</e>
+        <e type="operand">1.3</e>
+        <e type="operator" args="1">-</e>
+        <e type="operand">10.35</e>
+        <e type="operand">1.4</e>
+        <e type="operator" args="1">-</e>
+        <e type="operand">0.36</e>
+        <e type="operator" args="1">-</e>
+        <e type="operand">1.08</e>
+        <e type="operator" args="1">-</e>
+        <e type="operand">0.69</e>
+        <e type="operator" args="1">-</e>
+        <e type="operand">1.99</e>
+        <e type="operator" args="1">-</e>
+        <e type="operand">1.4</e>
+        <e type="operator" args="1">-</e>
+        <e type="operand">10.6</e>
+        <e type="operand">0.5</e>
+        <e type="operator" args="1">-</e>
+        <e type="operand">0.69</e>
+        <e type="operator" args="1">-</e>
+        <e type="operand">1.47</e>
+        <e type="operator" args="1">-</e>
+        <e type="operand">0.21</e>
+        <e type="operator" args="1">-</e>
+        <e type="operand">0.36</e>
+        <e type="operator" args="1">-</e>
+        <e type="operand">0.5</e>
+        <e type="operator" args="1">-</e>
+        <e type="operand">10.22</e>
+        <e type="operand">1.32</e>
+        <e type="operator" args="1">-</e>
+        <e type="operand">2.09</e>
+        <e type="operator" args="1">-</e>
+        <e type="operand">0.35</e>
+        <e type="operator" args="1">-</e>
+        <e type="operand">1.08</e>
+        <e type="operator" args="1">-</e>
+        <e type="operand">0.69</e>
+        <e type="operator" args="1">-</e>
+        <e type="operand">1.32</e>
+        <e type="operator" args="1">-</e>
+        <e type="operand">10.35</e>
+        <e type="operand">1.38</e>
+        <e type="operator" args="1">-</e>
+        <e type="operand">0.48</e>
+        <e type="operator" args="1">-</e>
+        <e type="operand">0.69</e>
+        <e type="operator" args="1">-</e>
+        <e type="operand">1.47</e>
+        <e type="operator" args="1">-</e>
+        <e type="operand">2.09</e>
+        <e type="operator" args="1">-</e>
+        <e type="operand">1.38</e>
+        <e type="operator" args="1">-</e>
+        <e type="operand">10.64</e>
+        <e type="operand">6</e>
+        <e type="operand">6</e>
+        <e type="function" args="38">mat</e>
+        <e type="operator" args="2">←</e>
+      </input>
+    </math>
+  </region>
+  <region id="77" left="657" top="3627" width="34" height="41" color="#000000" background-color="#ffffff" font-size="10">
+    <math fraction-type="none" optimize="1">
+      <input>
+        <e type="operand" style="unit">nF</e>
+        <e type="operand" style="unit">km</e>
+        <e type="operator" args="2">/</e>
+      </input>
+    </math>
+  </region>
+  <region id="78" left="81" top="3708" width="310" height="30" color="#000000" background-color="#ffffff" font-size="12">
+    <math fraction-type="none" optimize="1">
+      <input>
+        <e type="operand">P1</e>
+        <e type="operand">Zlin</e>
+        <e type="operand">1</e>
+        <e type="operand">6</e>
+        <e type="operand">1</e>
+        <e type="operand">6</e>
+        <e type="function" args="5">submatrix</e>
+        <e type="operator" args="2">←</e>
+      </input>
+    </math>
+  </region>
+  <region id="79" left="90" top="3744" width="310" height="30" color="#000000" background-color="#ffffff" font-size="12">
+    <math fraction-type="none" optimize="1">
+      <input>
+        <e type="operand">P2</e>
+        <e type="operand">Zlin</e>
+        <e type="operand">1</e>
+        <e type="operand">6</e>
+        <e type="operand">7</e>
+        <e type="operand">8</e>
+        <e type="function" args="5">submatrix</e>
+        <e type="operator" args="2">←</e>
+      </input>
+    </math>
+  </region>
+  <region id="80" left="90" top="3780" width="310" height="30" color="#000000" background-color="#ffffff" font-size="12">
+    <math fraction-type="none" optimize="1">
+      <input>
+        <e type="operand">P3</e>
+        <e type="operand">Zlin</e>
+        <e type="operand">7</e>
+        <e type="operand">8</e>
+        <e type="operand">1</e>
+        <e type="operand">6</e>
+        <e type="function" args="5">submatrix</e>
+        <e type="operator" args="2">←</e>
+      </input>
+    </math>
+  </region>
+  <region id="81" left="90" top="3816" width="310" height="30" color="#000000" background-color="#ffffff" font-size="12">
+    <math fraction-type="none" optimize="1">
+      <input>
+        <e type="operand">P4</e>
+        <e type="operand">Zlin</e>
+        <e type="operand">7</e>
+        <e type="operand">8</e>
+        <e type="operand">7</e>
+        <e type="operand">8</e>
+        <e type="function" args="5">submatrix</e>
+        <e type="operator" args="2">←</e>
+      </input>
+    </math>
+  </region>
+  <region id="82" left="90" top="3852" width="202" height="41" color="#000000" background-color="#ffffff" font-size="12">
+    <math fraction-type="none" optimize="1">
+      <input>
+        <e type="operand">Zred</e>
+        <e type="operand">P1</e>
+        <e type="operand">P2</e>
+        <e type="operand">P4</e>
+        <e type="operand">1</e>
+        <e type="operator" args="1">-</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">P3</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">-</e>
+        <e type="operator" args="2">←</e>
+      </input>
+    </math>
+  </region>
+  <region id="83" left="90" top="3906" width="171" height="28" border="true" color="#000000" background-color="#80ffff" font-size="12">
+    <text lang="eng">
+      <p>Impédanceréduite</p>
+    </text>
+  </region>
+  <region id="84" left="90" top="3942" width="1082" height="140" color="#000000" background-color="#80ffff" font-size="12">
+    <math optimize="1">
+      <input>
+        <e type="operand">Zred</e>
+        <e type="operand">1000</e>
+        <e type="operator" args="2">*</e>
+      </input>
+      <result action="numeric">
+        <e type="operand">0.0902</e>
+        <e type="operand">0.4793</e>
+        <e type="operand">i</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">+</e>
+        <e type="operand">0.0627</e>
+        <e type="operand">0.1393</e>
+        <e type="operand">i</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">+</e>
+        <e type="operand">0.0611</e>
+        <e type="operand">0.1825</e>
+        <e type="operand">i</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">+</e>
+        <e type="operand">0.0602</e>
+        <e type="operand">0.1144</e>
+        <e type="operand">i</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">+</e>
+        <e type="operand">0.061</e>
+        <e type="operand">0.1029</e>
+        <e type="operand">i</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">+</e>
+        <e type="operand">0.0607</e>
+        <e type="operand">0.133</e>
+        <e type="operand">i</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">+</e>
+        <e type="operand">0.0627</e>
+        <e type="operand">0.1393</e>
+        <e type="operand">i</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">+</e>
+        <e type="operand">0.0957</e>
+        <e type="operand">0.4321</e>
+        <e type="operand">i</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">+</e>
+        <e type="operand">0.0628</e>
+        <e type="operand">0.1446</e>
+        <e type="operand">i</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">+</e>
+        <e type="operand">0.0611</e>
+        <e type="operand">0.1038</e>
+        <e type="operand">i</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">+</e>
+        <e type="operand">0.0631</e>
+        <e type="operand">0.111</e>
+        <e type="operand">i</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">+</e>
+        <e type="operand">0.062</e>
+        <e type="operand">0.1207</e>
+        <e type="operand">i</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">+</e>
+        <e type="operand">0.0611</e>
+        <e type="operand">0.1825</e>
+        <e type="operand">i</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">+</e>
+        <e type="operand">0.0628</e>
+        <e type="operand">0.1446</e>
+        <e type="operand">i</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">+</e>
+        <e type="operand">0.0905</e>
+        <e type="operand">0.4728</e>
+        <e type="operand">i</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">+</e>
+        <e type="operand">0.0607</e>
+        <e type="operand">0.1344</e>
+        <e type="operand">i</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">+</e>
+        <e type="operand">0.062</e>
+        <e type="operand">0.1207</e>
+        <e type="operand">i</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">+</e>
+        <e type="operand">0.0611</e>
+        <e type="operand">0.1668</e>
+        <e type="operand">i</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">+</e>
+        <e type="operand">0.0602</e>
+        <e type="operand">0.1144</e>
+        <e type="operand">i</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">+</e>
+        <e type="operand">0.0611</e>
+        <e type="operand">0.1038</e>
+        <e type="operand">i</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">+</e>
+        <e type="operand">0.0607</e>
+        <e type="operand">0.1344</e>
+        <e type="operand">i</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">+</e>
+        <e type="operand">0.0902</e>
+        <e type="operand">0.4788</e>
+        <e type="operand">i</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">+</e>
+        <e type="operand">0.0628</e>
+        <e type="operand">0.1402</e>
+        <e type="operand">i</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">+</e>
+        <e type="operand">0.0611</e>
+        <e type="operand">0.186</e>
+        <e type="operand">i</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">+</e>
+        <e type="operand">0.061</e>
+        <e type="operand">0.1029</e>
+        <e type="operand">i</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">+</e>
+        <e type="operand">0.0631</e>
+        <e type="operand">0.111</e>
+        <e type="operand">i</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">+</e>
+        <e type="operand">0.062</e>
+        <e type="operand">0.1207</e>
+        <e type="operand">i</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">+</e>
+        <e type="operand">0.0628</e>
+        <e type="operand">0.1402</e>
+        <e type="operand">i</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">+</e>
+        <e type="operand">0.0957</e>
+        <e type="operand">0.4321</e>
+        <e type="operand">i</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">+</e>
+        <e type="operand">0.0628</e>
+        <e type="operand">0.1446</e>
+        <e type="operand">i</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">+</e>
+        <e type="operand">0.0607</e>
+        <e type="operand">0.133</e>
+        <e type="operand">i</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">+</e>
+        <e type="operand">0.062</e>
+        <e type="operand">0.1207</e>
+        <e type="operand">i</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">+</e>
+        <e type="operand">0.0611</e>
+        <e type="operand">0.1668</e>
+        <e type="operand">i</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">+</e>
+        <e type="operand">0.0611</e>
+        <e type="operand">0.186</e>
+        <e type="operand">i</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">+</e>
+        <e type="operand">0.0628</e>
+        <e type="operand">0.1446</e>
+        <e type="operand">i</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">+</e>
+        <e type="operand">0.0905</e>
+        <e type="operand">0.4728</e>
+        <e type="operand">i</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">+</e>
+        <e type="operand">6</e>
+        <e type="operand">6</e>
+        <e type="function" args="38">mat</e>
+      </result>
+    </math>
+  </region>
+  <region id="85" left="1062" top="4005" width="43" height="41" color="#000000" background-color="#ffffff" font-size="10">
+    <math fraction-type="none" optimize="1">
+      <input>
+        <e type="operand" style="unit">ohm</e>
+        <e type="operand" style="unit">km</e>
+        <e type="operator" args="2">/</e>
+      </input>
+    </math>
+  </region>
+  <region id="86" left="90" top="4113" width="315" height="24" border="true" color="#000000" background-color="#80ffff" font-size="10">
+    <text lang="fre">
+      <p>Matrice chaine équivalente à la ligne</p>
+    </text>
+  </region>
+  <region id="87" left="459" top="4113" width="187" height="24" border="true" color="#000000" background-color="#80ffff" font-size="10">
+    <text lang="fre">
+      <p>longueur de la ligne: </p>
+    </text>
+  </region>
+  <region id="88" left="675" top="4113" width="85" height="24" border="true" color="#000000" background-color="#80ffff" font-size="10">
+    <math fraction-type="none" optimize="1">
+      <input>
+        <e type="operand">long</e>
+        <e type="operand">100</e>
+        <e type="operator" args="2">←</e>
+      </input>
+    </math>
+  </region>
+  <region id="89" left="486" top="4149" width="222" height="33" color="#000000" background-color="#ffffff" font-size="10">
+    <math fraction-type="none" optimize="1">
+      <input>
+        <e type="operand">Y</e>
+        <e type="operand">Cred</e>
+        <e type="operand">π</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">j</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">freq</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">10</e>
+        <e type="operand">9</e>
+        <e type="operator" args="1">-</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">long</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">←</e>
+      </input>
+    </math>
+  </region>
+  <region id="90" left="99" top="4158" width="356" height="24" border="true" color="#000000" background-color="#80ffff" font-size="10">
+    <text lang="fre">
+      <p>Admittance correspondant à la 1/2 capacité</p>
+    </text>
+  </region>
+  <region id="91" left="99" top="4203" width="201" height="24" border="true" color="#000000" background-color="#80ffff" font-size="10">
+    <text lang="fre">
+      <p>Impédance longitudinale</p>
+    </text>
+  </region>
+  <region id="92" left="333" top="4203" width="108" height="24" color="#000000" background-color="#ffffff" font-size="10">
+    <math fraction-type="none" optimize="1">
+      <input>
+        <e type="operand">Z</e>
+        <e type="operand">Zred</e>
+        <e type="operand">long</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">←</e>
+      </input>
+    </math>
+  </region>
+  <region id="93" left="99" top="4248" width="129" height="26" color="#000000" background-color="#ffffff" font-size="10">
+    <math fraction-type="none" optimize="1">
+      <input>
+        <e type="operand">I6</e>
+        <e type="operand">6</e>
+        <e type="function" args="1">identity</e>
+        <e type="operator" args="2">←</e>
+      </input>
+    </math>
+  </region>
+  <region id="94" left="72" top="4284" width="3315" height="332" color="#000000" background-color="#ffffff" font-size="10">
+    <math optimize="1">
+      <input>
+        <e type="operand">Y</e>
+        <e type="operand">Z</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">I6</e>
+        <e type="operator" args="2">+</e>
+        <e type="operand">Z</e>
+        <e type="function" args="2">augment</e>
+        <e type="operand">Y</e>
+        <e type="operand">Y</e>
+        <e type="operand">Z</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">I6</e>
+        <e type="operator" args="2">+</e>
+        <e type="bracket">(</e>
+        <e type="operand">Y</e>
+        <e type="operator" args="2">*</e>
+        <e type="bracket">(</e>
+        <e type="operator" args="2">+</e>
+        <e type="operand">Y</e>
+        <e type="operand">Z</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">I6</e>
+        <e type="operator" args="2">+</e>
+        <e type="function" args="2">augment</e>
+        <e type="function" args="2">stack</e>
+      </input>
+      <result action="numeric">
+        <e type="operand">1</e>
+        <e type="operand">1.0215</e>
+        <e type="operand">10</e>
+        <e type="operand">6</e>
+        <e type="operator" args="1">-</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">i</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">+</e>
+        <e type="operand">7.022</e>
+        <e type="operand">10</e>
+        <e type="operand">7</e>
+        <e type="operator" args="1">-</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="1">-</e>
+        <e type="operand">5.0766</e>
+        <e type="operand">10</e>
+        <e type="operand">7</e>
+        <e type="operator" args="1">-</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">i</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">+</e>
+        <e type="operand">9.0311</e>
+        <e type="operand">10</e>
+        <e type="operand">7</e>
+        <e type="operator" args="1">-</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="1">-</e>
+        <e type="operand">4.6404</e>
+        <e type="operand">10</e>
+        <e type="operand">7</e>
+        <e type="operator" args="1">-</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">i</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">+</e>
+        <e type="operand">8.1836</e>
+        <e type="operand">10</e>
+        <e type="operand">7</e>
+        <e type="operator" args="1">-</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="1">-</e>
+        <e type="operand">5.3626</e>
+        <e type="operand">10</e>
+        <e type="operand">7</e>
+        <e type="operator" args="1">-</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">i</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">+</e>
+        <e type="operand">6.4616</e>
+        <e type="operand">10</e>
+        <e type="operand">7</e>
+        <e type="operator" args="1">-</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="1">-</e>
+        <e type="operand">5.302</e>
+        <e type="operand">10</e>
+        <e type="operand">7</e>
+        <e type="operator" args="1">-</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">i</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">+</e>
+        <e type="operand">8.5773</e>
+        <e type="operand">10</e>
+        <e type="operand">7</e>
+        <e type="operator" args="1">-</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="1">-</e>
+        <e type="operand">5.2789</e>
+        <e type="operand">10</e>
+        <e type="operand">7</e>
+        <e type="operator" args="1">-</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">i</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">+</e>
+        <e type="operand">0.009</e>
+        <e type="operand">0.0479</e>
+        <e type="operand">i</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">+</e>
+        <e type="operand">0.0063</e>
+        <e type="operand">0.0139</e>
+        <e type="operand">i</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">+</e>
+        <e type="operand">0.0061</e>
+        <e type="operand">0.0182</e>
+        <e type="operand">i</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">+</e>
+        <e type="operand">0.006</e>
+        <e type="operand">0.0114</e>
+        <e type="operand">i</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">+</e>
+        <e type="operand">0.0061</e>
+        <e type="operand">0.0103</e>
+        <e type="operand">i</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">+</e>
+        <e type="operand">0.0061</e>
+        <e type="operand">0.0133</e>
+        <e type="operand">i</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">+</e>
+        <e type="operand">5.0079</e>
+        <e type="operand">10</e>
+        <e type="operand">7</e>
+        <e type="operator" args="1">-</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="1">-</e>
+        <e type="operand">4.9787</e>
+        <e type="operand">10</e>
+        <e type="operand">7</e>
+        <e type="operator" args="1">-</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">i</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">+</e>
+        <e type="operand">1</e>
+        <e type="operand">1.0805</e>
+        <e type="operand">10</e>
+        <e type="operand">6</e>
+        <e type="operator" args="1">-</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">i</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">+</e>
+        <e type="operand">4.7689</e>
+        <e type="operand">10</e>
+        <e type="operand">7</e>
+        <e type="operator" args="1">-</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="1">-</e>
+        <e type="operand">4.9225</e>
+        <e type="operand">10</e>
+        <e type="operand">7</e>
+        <e type="operator" args="1">-</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">i</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">+</e>
+        <e type="operand">4.4779</e>
+        <e type="operand">10</e>
+        <e type="operand">7</e>
+        <e type="operator" args="1">-</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="1">-</e>
+        <e type="operand">5.1247</e>
+        <e type="operand">10</e>
+        <e type="operand">7</e>
+        <e type="operator" args="1">-</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">i</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">+</e>
+        <e type="operand">3.6037</e>
+        <e type="operand">10</e>
+        <e type="operand">7</e>
+        <e type="operator" args="1">-</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="1">-</e>
+        <e type="operand">4.9939</e>
+        <e type="operand">10</e>
+        <e type="operand">7</e>
+        <e type="operator" args="1">-</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">i</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">+</e>
+        <e type="operand">4.605</e>
+        <e type="operand">10</e>
+        <e type="operand">7</e>
+        <e type="operator" args="1">-</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="1">-</e>
+        <e type="operand">5.102</e>
+        <e type="operand">10</e>
+        <e type="operand">7</e>
+        <e type="operator" args="1">-</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">i</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">+</e>
+        <e type="operand">0.0063</e>
+        <e type="operand">0.0139</e>
+        <e type="operand">i</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">+</e>
+        <e type="operand">0.0096</e>
+        <e type="operand">0.0432</e>
+        <e type="operand">i</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">+</e>
+        <e type="operand">0.0063</e>
+        <e type="operand">0.0145</e>
+        <e type="operand">i</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">+</e>
+        <e type="operand">0.0061</e>
+        <e type="operand">0.0104</e>
+        <e type="operand">i</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">+</e>
+        <e type="operand">0.0063</e>
+        <e type="operand">0.0111</e>
+        <e type="operand">i</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">+</e>
+        <e type="operand">0.0062</e>
+        <e type="operand">0.0121</e>
+        <e type="operand">i</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">+</e>
+        <e type="operand">7.2548</e>
+        <e type="operand">10</e>
+        <e type="operand">7</e>
+        <e type="operator" args="1">-</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="1">-</e>
+        <e type="operand">3.4411</e>
+        <e type="operand">10</e>
+        <e type="operand">7</e>
+        <e type="operator" args="1">-</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">i</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">+</e>
+        <e type="operand">5.4124</e>
+        <e type="operand">10</e>
+        <e type="operand">7</e>
+        <e type="operator" args="1">-</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="1">-</e>
+        <e type="operand">3.804</e>
+        <e type="operand">10</e>
+        <e type="operand">7</e>
+        <e type="operator" args="1">-</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">i</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">+</e>
+        <e type="operand">1</e>
+        <e type="operand">9.2117</e>
+        <e type="operand">10</e>
+        <e type="operand">7</e>
+        <e type="operator" args="1">-</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">i</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">+</e>
+        <e type="operand">6.9421</e>
+        <e type="operand">10</e>
+        <e type="operand">7</e>
+        <e type="operator" args="1">-</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="1">-</e>
+        <e type="operand">4.0824</e>
+        <e type="operand">10</e>
+        <e type="operand">7</e>
+        <e type="operator" args="1">-</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">i</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">+</e>
+        <e type="operand">5.3074</e>
+        <e type="operand">10</e>
+        <e type="operand">7</e>
+        <e type="operator" args="1">-</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="1">-</e>
+        <e type="operand">4.0446</e>
+        <e type="operand">10</e>
+        <e type="operand">7</e>
+        <e type="operator" args="1">-</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">i</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">+</e>
+        <e type="operand">7.0099</e>
+        <e type="operand">10</e>
+        <e type="operand">7</e>
+        <e type="operator" args="1">-</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="1">-</e>
+        <e type="operand">3.6637</e>
+        <e type="operand">10</e>
+        <e type="operand">7</e>
+        <e type="operator" args="1">-</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">i</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">+</e>
+        <e type="operand">0.0061</e>
+        <e type="operand">0.0182</e>
+        <e type="operand">i</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">+</e>
+        <e type="operand">0.0063</e>
+        <e type="operand">0.0145</e>
+        <e type="operand">i</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">+</e>
+        <e type="operand">0.009</e>
+        <e type="operand">0.0473</e>
+        <e type="operand">i</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">+</e>
+        <e type="operand">0.0061</e>
+        <e type="operand">0.0134</e>
+        <e type="operand">i</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">+</e>
+        <e type="operand">0.0062</e>
+        <e type="operand">0.0121</e>
+        <e type="operand">i</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">+</e>
+        <e type="operand">0.0061</e>
+        <e type="operand">0.0167</e>
+        <e type="operand">i</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">+</e>
+        <e type="operand">8.0607</e>
+        <e type="operand">10</e>
+        <e type="operand">7</e>
+        <e type="operator" args="1">-</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="1">-</e>
+        <e type="operand">5.2785</e>
+        <e type="operand">10</e>
+        <e type="operand">7</e>
+        <e type="operator" args="1">-</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">i</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">+</e>
+        <e type="operand">6.3573</e>
+        <e type="operand">10</e>
+        <e type="operand">7</e>
+        <e type="operator" args="1">-</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="1">-</e>
+        <e type="operand">5.2172</e>
+        <e type="operand">10</e>
+        <e type="operand">7</e>
+        <e type="operator" args="1">-</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">i</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">+</e>
+        <e type="operand">8.464</e>
+        <e type="operand">10</e>
+        <e type="operand">7</e>
+        <e type="operator" args="1">-</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="1">-</e>
+        <e type="operand">5.1873</e>
+        <e type="operand">10</e>
+        <e type="operand">7</e>
+        <e type="operator" args="1">-</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">i</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">+</e>
+        <e type="operand">1</e>
+        <e type="operand">1.0159</e>
+        <e type="operand">10</e>
+        <e type="operand">6</e>
+        <e type="operator" args="1">-</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">i</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">+</e>
+        <e type="operand">6.8888</e>
+        <e type="operand">10</e>
+        <e type="operand">7</e>
+        <e type="operator" args="1">-</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="1">-</e>
+        <e type="operand">4.983</e>
+        <e type="operand">10</e>
+        <e type="operand">7</e>
+        <e type="operator" args="1">-</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">i</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">+</e>
+        <e type="operand">8.912</e>
+        <e type="operand">10</e>
+        <e type="operand">7</e>
+        <e type="operator" args="1">-</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="1">-</e>
+        <e type="operand">4.511</e>
+        <e type="operand">10</e>
+        <e type="operand">7</e>
+        <e type="operator" args="1">-</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">i</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">+</e>
+        <e type="operand">0.006</e>
+        <e type="operand">0.0114</e>
+        <e type="operand">i</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">+</e>
+        <e type="operand">0.0061</e>
+        <e type="operand">0.0104</e>
+        <e type="operand">i</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">+</e>
+        <e type="operand">0.0061</e>
+        <e type="operand">0.0134</e>
+        <e type="operand">i</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">+</e>
+        <e type="operand">0.009</e>
+        <e type="operand">0.0479</e>
+        <e type="operand">i</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">+</e>
+        <e type="operand">0.0063</e>
+        <e type="operand">0.014</e>
+        <e type="operand">i</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">+</e>
+        <e type="operand">0.0061</e>
+        <e type="operand">0.0186</e>
+        <e type="operand">i</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">+</e>
+        <e type="operand">4.5051</e>
+        <e type="operand">10</e>
+        <e type="operand">7</e>
+        <e type="operator" args="1">-</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="1">-</e>
+        <e type="operand">5.131</e>
+        <e type="operand">10</e>
+        <e type="operand">7</e>
+        <e type="operator" args="1">-</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">i</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">+</e>
+        <e type="operand">3.6192</e>
+        <e type="operand">10</e>
+        <e type="operand">7</e>
+        <e type="operator" args="1">-</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="1">-</e>
+        <e type="operand">5.003</e>
+        <e type="operand">10</e>
+        <e type="operand">7</e>
+        <e type="operator" args="1">-</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">i</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">+</e>
+        <e type="operand">4.6355</e>
+        <e type="operand">10</e>
+        <e type="operand">7</e>
+        <e type="operator" args="1">-</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="1">-</e>
+        <e type="operand">5.1112</e>
+        <e type="operand">10</e>
+        <e type="operand">7</e>
+        <e type="operator" args="1">-</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">i</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">+</e>
+        <e type="operand">4.9922</e>
+        <e type="operand">10</e>
+        <e type="operand">7</e>
+        <e type="operator" args="1">-</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="1">-</e>
+        <e type="operand">4.9818</e>
+        <e type="operand">10</e>
+        <e type="operand">7</e>
+        <e type="operator" args="1">-</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">i</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">+</e>
+        <e type="operand">1</e>
+        <e type="operand">1.0814</e>
+        <e type="operand">10</e>
+        <e type="operand">6</e>
+        <e type="operator" args="1">-</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">i</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">+</e>
+        <e type="operand">4.816</e>
+        <e type="operand">10</e>
+        <e type="operand">7</e>
+        <e type="operator" args="1">-</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="1">-</e>
+        <e type="operand">4.9409</e>
+        <e type="operand">10</e>
+        <e type="operand">7</e>
+        <e type="operator" args="1">-</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">i</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">+</e>
+        <e type="operand">0.0061</e>
+        <e type="operand">0.0103</e>
+        <e type="operand">i</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">+</e>
+        <e type="operand">0.0063</e>
+        <e type="operand">0.0111</e>
+        <e type="operand">i</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">+</e>
+        <e type="operand">0.0062</e>
+        <e type="operand">0.0121</e>
+        <e type="operand">i</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">+</e>
+        <e type="operand">0.0063</e>
+        <e type="operand">0.014</e>
+        <e type="operand">i</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">+</e>
+        <e type="operand">0.0096</e>
+        <e type="operand">0.0432</e>
+        <e type="operand">i</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">+</e>
+        <e type="operand">0.0063</e>
+        <e type="operand">0.0145</e>
+        <e type="operand">i</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">+</e>
+        <e type="operand">6.9049</e>
+        <e type="operand">10</e>
+        <e type="operand">7</e>
+        <e type="operator" args="1">-</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="1">-</e>
+        <e type="operand">4.0709</e>
+        <e type="operand">10</e>
+        <e type="operand">7</e>
+        <e type="operator" args="1">-</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">i</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">+</e>
+        <e type="operand">5.2803</e>
+        <e type="operand">10</e>
+        <e type="operand">7</e>
+        <e type="operator" args="1">-</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="1">-</e>
+        <e type="operand">4.0255</e>
+        <e type="operand">10</e>
+        <e type="operand">7</e>
+        <e type="operator" args="1">-</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">i</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">+</e>
+        <e type="operand">6.9834</e>
+        <e type="operand">10</e>
+        <e type="operand">7</e>
+        <e type="operator" args="1">-</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="1">-</e>
+        <e type="operand">3.6446</e>
+        <e type="operand">10</e>
+        <e type="operand">7</e>
+        <e type="operator" args="1">-</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">i</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">+</e>
+        <e type="operand">7.2406</e>
+        <e type="operand">10</e>
+        <e type="operand">7</e>
+        <e type="operator" args="1">-</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="1">-</e>
+        <e type="operand">3.3772</e>
+        <e type="operand">10</e>
+        <e type="operand">7</e>
+        <e type="operator" args="1">-</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">i</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">+</e>
+        <e type="operand">5.4282</e>
+        <e type="operand">10</e>
+        <e type="operand">7</e>
+        <e type="operator" args="1">-</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="1">-</e>
+        <e type="operand">3.7935</e>
+        <e type="operand">10</e>
+        <e type="operand">7</e>
+        <e type="operator" args="1">-</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">i</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">+</e>
+        <e type="operand">1</e>
+        <e type="operand">9.2108</e>
+        <e type="operand">10</e>
+        <e type="operand">7</e>
+        <e type="operator" args="1">-</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">i</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">+</e>
+        <e type="operand">0.0061</e>
+        <e type="operand">0.0133</e>
+        <e type="operand">i</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">+</e>
+        <e type="operand">0.0062</e>
+        <e type="operand">0.0121</e>
+        <e type="operand">i</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">+</e>
+        <e type="operand">0.0061</e>
+        <e type="operand">0.0167</e>
+        <e type="operand">i</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">+</e>
+        <e type="operand">0.0061</e>
+        <e type="operand">0.0186</e>
+        <e type="operand">i</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">+</e>
+        <e type="operand">0.0063</e>
+        <e type="operand">0.0145</e>
+        <e type="operand">i</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">+</e>
+        <e type="operand">0.009</e>
+        <e type="operand">0.0473</e>
+        <e type="operand">i</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">+</e>
+        <e type="operand">1.2949</e>
+        <e type="operand">10</e>
+        <e type="operand">10</e>
+        <e type="operator" args="1">-</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="1">-</e>
+        <e type="operand">3.1918</e>
+        <e type="operand">10</e>
+        <e type="operand">4</e>
+        <e type="operator" args="1">-</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">i</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">+</e>
+        <e type="operand">3.3722</e>
+        <e type="operand">10</e>
+        <e type="operand">11</e>
+        <e type="operator" args="1">-</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="1">-</e>
+        <e type="operand">4.0841</e>
+        <e type="operand">10</e>
+        <e type="operand">5</e>
+        <e type="operator" args="1">-</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">i</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">-</e>
+        <e type="operand">1.2023</e>
+        <e type="operand">10</e>
+        <e type="operand">11</e>
+        <e type="operator" args="1">-</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="1">-</e>
+        <e type="operand">6.2518</e>
+        <e type="operand">10</e>
+        <e type="operand">5</e>
+        <e type="operator" args="1">-</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">i</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">-</e>
+        <e type="operand">4.788</e>
+        <e type="operand">10</e>
+        <e type="operand">11</e>
+        <e type="operator" args="1">-</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="1">-</e>
+        <e type="operand">6.5974</e>
+        <e type="operand">10</e>
+        <e type="operand">6</e>
+        <e type="operator" args="1">-</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">i</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">-</e>
+        <e type="operand">4.4379</e>
+        <e type="operand">10</e>
+        <e type="operand">11</e>
+        <e type="operator" args="1">-</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="1">-</e>
+        <e type="operand">1.0996</e>
+        <e type="operand">10</e>
+        <e type="operand">5</e>
+        <e type="operator" args="1">-</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">i</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">-</e>
+        <e type="operand">3.5211</e>
+        <e type="operand">10</e>
+        <e type="operand">11</e>
+        <e type="operator" args="1">-</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="1">-</e>
+        <e type="operand">1.508</e>
+        <e type="operand">10</e>
+        <e type="operand">5</e>
+        <e type="operator" args="1">-</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">i</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">-</e>
+        <e type="operand">1</e>
+        <e type="operand">1.0215</e>
+        <e type="operand">10</e>
+        <e type="operand">6</e>
+        <e type="operator" args="1">-</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">i</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">+</e>
+        <e type="operand">7.022</e>
+        <e type="operand">10</e>
+        <e type="operand">7</e>
+        <e type="operator" args="1">-</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="1">-</e>
+        <e type="operand">5.0766</e>
+        <e type="operand">10</e>
+        <e type="operand">7</e>
+        <e type="operator" args="1">-</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">i</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">+</e>
+        <e type="operand">9.0311</e>
+        <e type="operand">10</e>
+        <e type="operand">7</e>
+        <e type="operator" args="1">-</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="1">-</e>
+        <e type="operand">4.6404</e>
+        <e type="operand">10</e>
+        <e type="operand">7</e>
+        <e type="operator" args="1">-</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">i</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">+</e>
+        <e type="operand">8.1836</e>
+        <e type="operand">10</e>
+        <e type="operand">7</e>
+        <e type="operator" args="1">-</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="1">-</e>
+        <e type="operand">5.3626</e>
+        <e type="operand">10</e>
+        <e type="operand">7</e>
+        <e type="operator" args="1">-</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">i</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">+</e>
+        <e type="operand">6.4616</e>
+        <e type="operand">10</e>
+        <e type="operand">7</e>
+        <e type="operator" args="1">-</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="1">-</e>
+        <e type="operand">5.302</e>
+        <e type="operand">10</e>
+        <e type="operand">7</e>
+        <e type="operator" args="1">-</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">i</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">+</e>
+        <e type="operand">8.5773</e>
+        <e type="operand">10</e>
+        <e type="operand">7</e>
+        <e type="operator" args="1">-</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="1">-</e>
+        <e type="operand">5.2789</e>
+        <e type="operand">10</e>
+        <e type="operand">7</e>
+        <e type="operator" args="1">-</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">i</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">+</e>
+        <e type="operand">3.3722</e>
+        <e type="operand">10</e>
+        <e type="operand">11</e>
+        <e type="operator" args="1">-</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="1">-</e>
+        <e type="operand">4.0841</e>
+        <e type="operand">10</e>
+        <e type="operand">5</e>
+        <e type="operator" args="1">-</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">i</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">-</e>
+        <e type="operand">1.3778</e>
+        <e type="operand">10</e>
+        <e type="operand">10</e>
+        <e type="operator" args="1">-</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="1">-</e>
+        <e type="operand">3.2515</e>
+        <e type="operand">10</e>
+        <e type="operand">4</e>
+        <e type="operator" args="1">-</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">i</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">+</e>
+        <e type="operand">2.1418</e>
+        <e type="operand">10</e>
+        <e type="operand">11</e>
+        <e type="operator" args="1">-</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="1">-</e>
+        <e type="operand">4.3982</e>
+        <e type="operand">10</e>
+        <e type="operand">5</e>
+        <e type="operator" args="1">-</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">i</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">-</e>
+        <e type="operand">4.3547</e>
+        <e type="operand">10</e>
+        <e type="operand">11</e>
+        <e type="operator" args="1">-</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="1">-</e>
+        <e type="operand">1.131</e>
+        <e type="operand">10</e>
+        <e type="operand">5</e>
+        <e type="operator" args="1">-</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">i</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">-</e>
+        <e type="operand">3.3101</e>
+        <e type="operand">10</e>
+        <e type="operand">11</e>
+        <e type="operator" args="1">-</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="1">-</e>
+        <e type="operand">3.3929</e>
+        <e type="operand">10</e>
+        <e type="operand">5</e>
+        <e type="operator" args="1">-</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">i</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">-</e>
+        <e type="operand">3.079</e>
+        <e type="operand">10</e>
+        <e type="operand">11</e>
+        <e type="operator" args="1">-</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="1">-</e>
+        <e type="operand">2.1677</e>
+        <e type="operand">10</e>
+        <e type="operand">5</e>
+        <e type="operator" args="1">-</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">i</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">-</e>
+        <e type="operand">5.0079</e>
+        <e type="operand">10</e>
+        <e type="operand">7</e>
+        <e type="operator" args="1">-</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="1">-</e>
+        <e type="operand">4.9787</e>
+        <e type="operand">10</e>
+        <e type="operand">7</e>
+        <e type="operator" args="1">-</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">i</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">+</e>
+        <e type="operand">1</e>
+        <e type="operand">1.0805</e>
+        <e type="operand">10</e>
+        <e type="operand">6</e>
+        <e type="operator" args="1">-</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">i</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">+</e>
+        <e type="operand">4.7689</e>
+        <e type="operand">10</e>
+        <e type="operand">7</e>
+        <e type="operator" args="1">-</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="1">-</e>
+        <e type="operand">4.9225</e>
+        <e type="operand">10</e>
+        <e type="operand">7</e>
+        <e type="operator" args="1">-</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">i</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">+</e>
+        <e type="operand">4.4779</e>
+        <e type="operand">10</e>
+        <e type="operand">7</e>
+        <e type="operator" args="1">-</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="1">-</e>
+        <e type="operand">5.1247</e>
+        <e type="operand">10</e>
+        <e type="operand">7</e>
+        <e type="operator" args="1">-</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">i</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">+</e>
+        <e type="operand">3.6037</e>
+        <e type="operand">10</e>
+        <e type="operand">7</e>
+        <e type="operator" args="1">-</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="1">-</e>
+        <e type="operand">4.9939</e>
+        <e type="operand">10</e>
+        <e type="operand">7</e>
+        <e type="operator" args="1">-</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">i</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">+</e>
+        <e type="operand">4.605</e>
+        <e type="operand">10</e>
+        <e type="operand">7</e>
+        <e type="operator" args="1">-</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="1">-</e>
+        <e type="operand">5.102</e>
+        <e type="operand">10</e>
+        <e type="operand">7</e>
+        <e type="operator" args="1">-</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">i</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">+</e>
+        <e type="operand">1.2023</e>
+        <e type="operand">10</e>
+        <e type="operand">11</e>
+        <e type="operator" args="1">-</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="1">-</e>
+        <e type="operand">6.2518</e>
+        <e type="operand">10</e>
+        <e type="operand">5</e>
+        <e type="operator" args="1">-</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">i</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">-</e>
+        <e type="operand">2.1418</e>
+        <e type="operand">10</e>
+        <e type="operand">11</e>
+        <e type="operator" args="1">-</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="1">-</e>
+        <e type="operand">4.3982</e>
+        <e type="operand">10</e>
+        <e type="operand">5</e>
+        <e type="operator" args="1">-</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">i</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">-</e>
+        <e type="operand">1.1821</e>
+        <e type="operand">10</e>
+        <e type="operand">10</e>
+        <e type="operator" args="1">-</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="1">-</e>
+        <e type="operand">3.3301</e>
+        <e type="operand">10</e>
+        <e type="operand">4</e>
+        <e type="operator" args="1">-</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">i</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">+</e>
+        <e type="operand">3.4601</e>
+        <e type="operand">10</e>
+        <e type="operand">11</e>
+        <e type="operator" args="1">-</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="1">-</e>
+        <e type="operand">1.5708</e>
+        <e type="operand">10</e>
+        <e type="operand">5</e>
+        <e type="operator" args="1">-</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">i</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">-</e>
+        <e type="operand">3.102</e>
+        <e type="operand">10</e>
+        <e type="operand">11</e>
+        <e type="operator" args="1">-</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="1">-</e>
+        <e type="operand">2.1677</e>
+        <e type="operand">10</e>
+        <e type="operand">5</e>
+        <e type="operator" args="1">-</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">i</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">-</e>
+        <e type="operand">1.1075</e>
+        <e type="operand">10</e>
+        <e type="operand">11</e>
+        <e type="operator" args="1">-</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="1">-</e>
+        <e type="operand">4.6181</e>
+        <e type="operand">10</e>
+        <e type="operand">5</e>
+        <e type="operator" args="1">-</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">i</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">-</e>
+        <e type="operand">7.2548</e>
+        <e type="operand">10</e>
+        <e type="operand">7</e>
+        <e type="operator" args="1">-</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="1">-</e>
+        <e type="operand">3.4411</e>
+        <e type="operand">10</e>
+        <e type="operand">7</e>
+        <e type="operator" args="1">-</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">i</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">+</e>
+        <e type="operand">5.4124</e>
+        <e type="operand">10</e>
+        <e type="operand">7</e>
+        <e type="operator" args="1">-</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="1">-</e>
+        <e type="operand">3.804</e>
+        <e type="operand">10</e>
+        <e type="operand">7</e>
+        <e type="operator" args="1">-</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">i</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">+</e>
+        <e type="operand">1</e>
+        <e type="operand">9.2117</e>
+        <e type="operand">10</e>
+        <e type="operand">7</e>
+        <e type="operator" args="1">-</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">i</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">+</e>
+        <e type="operand">6.9421</e>
+        <e type="operand">10</e>
+        <e type="operand">7</e>
+        <e type="operator" args="1">-</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="1">-</e>
+        <e type="operand">4.0824</e>
+        <e type="operand">10</e>
+        <e type="operand">7</e>
+        <e type="operator" args="1">-</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">i</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">+</e>
+        <e type="operand">5.3074</e>
+        <e type="operand">10</e>
+        <e type="operand">7</e>
+        <e type="operator" args="1">-</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="1">-</e>
+        <e type="operand">4.0446</e>
+        <e type="operand">10</e>
+        <e type="operand">7</e>
+        <e type="operator" args="1">-</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">i</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">+</e>
+        <e type="operand">7.0099</e>
+        <e type="operand">10</e>
+        <e type="operand">7</e>
+        <e type="operator" args="1">-</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="1">-</e>
+        <e type="operand">3.6637</e>
+        <e type="operand">10</e>
+        <e type="operand">7</e>
+        <e type="operator" args="1">-</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">i</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">+</e>
+        <e type="operand">4.788</e>
+        <e type="operand">10</e>
+        <e type="operand">11</e>
+        <e type="operator" args="1">-</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="1">-</e>
+        <e type="operand">6.5974</e>
+        <e type="operand">10</e>
+        <e type="operand">6</e>
+        <e type="operator" args="1">-</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">i</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">-</e>
+        <e type="operand">4.3547</e>
+        <e type="operand">10</e>
+        <e type="operand">11</e>
+        <e type="operator" args="1">-</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="1">-</e>
+        <e type="operand">1.131</e>
+        <e type="operand">10</e>
+        <e type="operand">5</e>
+        <e type="operator" args="1">-</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">i</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">-</e>
+        <e type="operand">3.4601</e>
+        <e type="operand">10</e>
+        <e type="operand">11</e>
+        <e type="operator" args="1">-</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="1">-</e>
+        <e type="operand">1.5708</e>
+        <e type="operand">10</e>
+        <e type="operand">5</e>
+        <e type="operator" args="1">-</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">i</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">-</e>
+        <e type="operand">1.2918</e>
+        <e type="operand">10</e>
+        <e type="operand">10</e>
+        <e type="operator" args="1">-</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="1">-</e>
+        <e type="operand">3.2107</e>
+        <e type="operand">10</e>
+        <e type="operand">4</e>
+        <e type="operator" args="1">-</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">i</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">+</e>
+        <e type="operand">3.2796</e>
+        <e type="operand">10</e>
+        <e type="operand">11</e>
+        <e type="operator" args="1">-</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="1">-</e>
+        <e type="operand">4.1469</e>
+        <e type="operand">10</e>
+        <e type="operand">5</e>
+        <e type="operator" args="1">-</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">i</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">-</e>
+        <e type="operand">9.6295</e>
+        <e type="operand">10</e>
+        <e type="operand">12</e>
+        <e type="operator" args="1">-</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="1">-</e>
+        <e type="operand">6.5659</e>
+        <e type="operand">10</e>
+        <e type="operand">5</e>
+        <e type="operator" args="1">-</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">i</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">-</e>
+        <e type="operand">8.0607</e>
+        <e type="operand">10</e>
+        <e type="operand">7</e>
+        <e type="operator" args="1">-</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="1">-</e>
+        <e type="operand">5.2785</e>
+        <e type="operand">10</e>
+        <e type="operand">7</e>
+        <e type="operator" args="1">-</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">i</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">+</e>
+        <e type="operand">6.3573</e>
+        <e type="operand">10</e>
+        <e type="operand">7</e>
+        <e type="operator" args="1">-</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="1">-</e>
+        <e type="operand">5.2172</e>
+        <e type="operand">10</e>
+        <e type="operand">7</e>
+        <e type="operator" args="1">-</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">i</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">+</e>
+        <e type="operand">8.464</e>
+        <e type="operand">10</e>
+        <e type="operand">7</e>
+        <e type="operator" args="1">-</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="1">-</e>
+        <e type="operand">5.1873</e>
+        <e type="operand">10</e>
+        <e type="operand">7</e>
+        <e type="operator" args="1">-</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">i</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">+</e>
+        <e type="operand">1</e>
+        <e type="operand">1.0159</e>
+        <e type="operand">10</e>
+        <e type="operand">6</e>
+        <e type="operator" args="1">-</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">i</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">+</e>
+        <e type="operand">6.8888</e>
+        <e type="operand">10</e>
+        <e type="operand">7</e>
+        <e type="operator" args="1">-</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="1">-</e>
+        <e type="operand">4.983</e>
+        <e type="operand">10</e>
+        <e type="operand">7</e>
+        <e type="operator" args="1">-</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">i</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">+</e>
+        <e type="operand">8.912</e>
+        <e type="operand">10</e>
+        <e type="operand">7</e>
+        <e type="operator" args="1">-</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="1">-</e>
+        <e type="operand">4.511</e>
+        <e type="operand">10</e>
+        <e type="operand">7</e>
+        <e type="operator" args="1">-</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">i</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">+</e>
+        <e type="operand">4.4379</e>
+        <e type="operand">10</e>
+        <e type="operand">11</e>
+        <e type="operator" args="1">-</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="1">-</e>
+        <e type="operand">1.0996</e>
+        <e type="operand">10</e>
+        <e type="operand">5</e>
+        <e type="operator" args="1">-</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">i</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">-</e>
+        <e type="operand">3.3101</e>
+        <e type="operand">10</e>
+        <e type="operand">11</e>
+        <e type="operator" args="1">-</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="1">-</e>
+        <e type="operand">3.3929</e>
+        <e type="operand">10</e>
+        <e type="operand">5</e>
+        <e type="operator" args="1">-</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">i</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">-</e>
+        <e type="operand">3.102</e>
+        <e type="operand">10</e>
+        <e type="operand">11</e>
+        <e type="operator" args="1">-</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="1">-</e>
+        <e type="operand">2.1677</e>
+        <e type="operand">10</e>
+        <e type="operand">5</e>
+        <e type="operator" args="1">-</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">i</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">-</e>
+        <e type="operand">3.2796</e>
+        <e type="operand">10</e>
+        <e type="operand">11</e>
+        <e type="operator" args="1">-</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="1">-</e>
+        <e type="operand">4.1469</e>
+        <e type="operand">10</e>
+        <e type="operand">5</e>
+        <e type="operator" args="1">-</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">i</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">-</e>
+        <e type="operand">1.3793</e>
+        <e type="operand">10</e>
+        <e type="operand">10</e>
+        <e type="operator" args="1">-</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="1">-</e>
+        <e type="operand">3.2515</e>
+        <e type="operand">10</e>
+        <e type="operand">4</e>
+        <e type="operator" args="1">-</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">i</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">+</e>
+        <e type="operand">2.1688</e>
+        <e type="operand">10</e>
+        <e type="operand">11</e>
+        <e type="operator" args="1">-</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="1">-</e>
+        <e type="operand">4.3354</e>
+        <e type="operand">10</e>
+        <e type="operand">5</e>
+        <e type="operator" args="1">-</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">i</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">-</e>
+        <e type="operand">4.5051</e>
+        <e type="operand">10</e>
+        <e type="operand">7</e>
+        <e type="operator" args="1">-</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="1">-</e>
+        <e type="operand">5.131</e>
+        <e type="operand">10</e>
+        <e type="operand">7</e>
+        <e type="operator" args="1">-</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">i</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">+</e>
+        <e type="operand">3.6192</e>
+        <e type="operand">10</e>
+        <e type="operand">7</e>
+        <e type="operator" args="1">-</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="1">-</e>
+        <e type="operand">5.003</e>
+        <e type="operand">10</e>
+        <e type="operand">7</e>
+        <e type="operator" args="1">-</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">i</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">+</e>
+        <e type="operand">4.6355</e>
+        <e type="operand">10</e>
+        <e type="operand">7</e>
+        <e type="operator" args="1">-</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="1">-</e>
+        <e type="operand">5.1112</e>
+        <e type="operand">10</e>
+        <e type="operand">7</e>
+        <e type="operator" args="1">-</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">i</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">+</e>
+        <e type="operand">4.9922</e>
+        <e type="operand">10</e>
+        <e type="operand">7</e>
+        <e type="operator" args="1">-</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="1">-</e>
+        <e type="operand">4.9818</e>
+        <e type="operand">10</e>
+        <e type="operand">7</e>
+        <e type="operator" args="1">-</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">i</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">+</e>
+        <e type="operand">1</e>
+        <e type="operand">1.0814</e>
+        <e type="operand">10</e>
+        <e type="operand">6</e>
+        <e type="operator" args="1">-</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">i</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">+</e>
+        <e type="operand">4.816</e>
+        <e type="operand">10</e>
+        <e type="operand">7</e>
+        <e type="operator" args="1">-</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="1">-</e>
+        <e type="operand">4.9409</e>
+        <e type="operand">10</e>
+        <e type="operand">7</e>
+        <e type="operator" args="1">-</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">i</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">+</e>
+        <e type="operand">3.5211</e>
+        <e type="operand">10</e>
+        <e type="operand">11</e>
+        <e type="operator" args="1">-</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="1">-</e>
+        <e type="operand">1.508</e>
+        <e type="operand">10</e>
+        <e type="operand">5</e>
+        <e type="operator" args="1">-</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">i</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">-</e>
+        <e type="operand">3.079</e>
+        <e type="operand">10</e>
+        <e type="operand">11</e>
+        <e type="operator" args="1">-</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="1">-</e>
+        <e type="operand">2.1677</e>
+        <e type="operand">10</e>
+        <e type="operand">5</e>
+        <e type="operator" args="1">-</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">i</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">-</e>
+        <e type="operand">1.1075</e>
+        <e type="operand">10</e>
+        <e type="operand">11</e>
+        <e type="operator" args="1">-</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="1">-</e>
+        <e type="operand">4.6181</e>
+        <e type="operand">10</e>
+        <e type="operand">5</e>
+        <e type="operator" args="1">-</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">i</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">-</e>
+        <e type="operand">9.6295</e>
+        <e type="operand">10</e>
+        <e type="operand">12</e>
+        <e type="operator" args="1">-</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="1">-</e>
+        <e type="operand">6.5659</e>
+        <e type="operand">10</e>
+        <e type="operand">5</e>
+        <e type="operator" args="1">-</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">i</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">-</e>
+        <e type="operand">2.1688</e>
+        <e type="operand">10</e>
+        <e type="operand">11</e>
+        <e type="operator" args="1">-</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="1">-</e>
+        <e type="operand">4.3354</e>
+        <e type="operand">10</e>
+        <e type="operand">5</e>
+        <e type="operator" args="1">-</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">i</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">-</e>
+        <e type="operand">1.1878</e>
+        <e type="operand">10</e>
+        <e type="operand">10</e>
+        <e type="operator" args="1">-</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="1">-</e>
+        <e type="operand">3.3426</e>
+        <e type="operand">10</e>
+        <e type="operand">4</e>
+        <e type="operator" args="1">-</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">i</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">+</e>
+        <e type="operand">6.9049</e>
+        <e type="operand">10</e>
+        <e type="operand">7</e>
+        <e type="operator" args="1">-</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="1">-</e>
+        <e type="operand">4.0709</e>
+        <e type="operand">10</e>
+        <e type="operand">7</e>
+        <e type="operator" args="1">-</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">i</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">+</e>
+        <e type="operand">5.2803</e>
+        <e type="operand">10</e>
+        <e type="operand">7</e>
+        <e type="operator" args="1">-</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="1">-</e>
+        <e type="operand">4.0255</e>
+        <e type="operand">10</e>
+        <e type="operand">7</e>
+        <e type="operator" args="1">-</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">i</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">+</e>
+        <e type="operand">6.9834</e>
+        <e type="operand">10</e>
+        <e type="operand">7</e>
+        <e type="operator" args="1">-</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="1">-</e>
+        <e type="operand">3.6446</e>
+        <e type="operand">10</e>
+        <e type="operand">7</e>
+        <e type="operator" args="1">-</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">i</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">+</e>
+        <e type="operand">7.2406</e>
+        <e type="operand">10</e>
+        <e type="operand">7</e>
+        <e type="operator" args="1">-</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="1">-</e>
+        <e type="operand">3.3772</e>
+        <e type="operand">10</e>
+        <e type="operand">7</e>
+        <e type="operator" args="1">-</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">i</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">+</e>
+        <e type="operand">5.4282</e>
+        <e type="operand">10</e>
+        <e type="operand">7</e>
+        <e type="operator" args="1">-</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="1">-</e>
+        <e type="operand">3.7935</e>
+        <e type="operand">10</e>
+        <e type="operand">7</e>
+        <e type="operator" args="1">-</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">i</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">+</e>
+        <e type="operand">1</e>
+        <e type="operand">9.2108</e>
+        <e type="operand">10</e>
+        <e type="operand">7</e>
+        <e type="operator" args="1">-</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">i</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">+</e>
+        <e type="operand">12</e>
+        <e type="operand">12</e>
+        <e type="function" args="146">mat</e>
+      </result>
+    </math>
+  </region>
+  <region id="95" left="72" top="4815" width="817" height="300" color="#000000" background-color="#ffffff" font-size="10">
+    <math optimize="1">
+      <input>
+        <e type="operand">Y</e>
+        <e type="operand">Z</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">I6</e>
+        <e type="operator" args="2">+</e>
+        <e type="operand">Z</e>
+        <e type="function" args="2">augment</e>
+        <e type="operand">Y</e>
+        <e type="operand">Y</e>
+        <e type="operand">Z</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">I6</e>
+        <e type="operator" args="2">+</e>
+        <e type="bracket">(</e>
+        <e type="operand">Y</e>
+        <e type="operator" args="2">*</e>
+        <e type="bracket">(</e>
+        <e type="operator" args="2">+</e>
+        <e type="operand">Y</e>
+        <e type="operand">Z</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">I6</e>
+        <e type="operator" args="2">+</e>
+        <e type="function" args="2">augment</e>
+        <e type="function" args="2">stack</e>
+        <e type="operand">420</e>
+        <e type="operand">420</e>
+        <e type="operand">j</e>
+        <e type="operand">2</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">π</e>
+        <e type="operand">3</e>
+        <e type="operator" args="2">/</e>
+        <e type="operator" args="2">*</e>
+        <e type="function" args="1">exp</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">420</e>
+        <e type="operand">j</e>
+        <e type="operand">4</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">π</e>
+        <e type="operand">3</e>
+        <e type="operator" args="2">/</e>
+        <e type="operator" args="2">*</e>
+        <e type="function" args="1">exp</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">420</e>
+        <e type="operand">420</e>
+        <e type="operand">j</e>
+        <e type="operand">2</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">π</e>
+        <e type="operand">3</e>
+        <e type="operator" args="2">/</e>
+        <e type="operator" args="2">*</e>
+        <e type="function" args="1">exp</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">420</e>
+        <e type="operand">j</e>
+        <e type="operand">4</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">π</e>
+        <e type="operand">3</e>
+        <e type="operator" args="2">/</e>
+        <e type="operator" args="2">*</e>
+        <e type="function" args="1">exp</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">0</e>
+        <e type="operand">0</e>
+        <e type="operand">0</e>
+        <e type="operand">0</e>
+        <e type="operand">0</e>
+        <e type="operand">0</e>
+        <e type="operand">12</e>
+        <e type="operand">1</e>
+        <e type="function" args="14">mat</e>
+        <e type="operator" args="2">*</e>
+      </input>
+      <result action="numeric">
+        <e type="operand">419.9975</e>
+        <e type="operand">3.7803</e>
+        <e type="operand">10</e>
+        <e type="operand">4</e>
+        <e type="operator" args="1">-</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">i</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">+</e>
+        <e type="operand">209.9991</e>
+        <e type="operator" args="1">-</e>
+        <e type="operand">363.7286</e>
+        <e type="operand">i</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">+</e>
+        <e type="operand">209.9987</e>
+        <e type="operator" args="1">-</e>
+        <e type="operand">363.7286</e>
+        <e type="operand">i</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">-</e>
+        <e type="operand">419.9975</e>
+        <e type="operand">3.8071</e>
+        <e type="operand">10</e>
+        <e type="operand">4</e>
+        <e type="operator" args="1">-</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">i</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">+</e>
+        <e type="operand">209.9991</e>
+        <e type="operator" args="1">-</e>
+        <e type="operand">363.7286</e>
+        <e type="operand">i</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">+</e>
+        <e type="operand">209.9987</e>
+        <e type="operator" args="1">-</e>
+        <e type="operand">363.7286</e>
+        <e type="operand">i</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">-</e>
+        <e type="operand">0.0094</e>
+        <e type="operator" args="1">-</e>
+        <e type="operand">0.1585</e>
+        <e type="operand">i</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">+</e>
+        <e type="operand">0.1298</e>
+        <e type="operator" args="1">-</e>
+        <e type="operand">0.0693</e>
+        <e type="operand">i</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">-</e>
+        <e type="operand">0.1282</e>
+        <e type="operand">0.0793</e>
+        <e type="operand">i</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">-</e>
+        <e type="operand">0.0104</e>
+        <e type="operator" args="1">-</e>
+        <e type="operand">0.1602</e>
+        <e type="operand">i</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">+</e>
+        <e type="operand">0.1296</e>
+        <e type="operator" args="1">-</e>
+        <e type="operand">0.0695</e>
+        <e type="operand">i</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">-</e>
+        <e type="operand">0.1284</e>
+        <e type="operand">0.0808</e>
+        <e type="operand">i</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">-</e>
+        <e type="operand">12</e>
+        <e type="operand">1</e>
+        <e type="function" args="14">mat</e>
+      </result>
+    </math>
+  </region>
+</regions>
